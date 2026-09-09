@@ -1,7 +1,6 @@
-# Global water and energy footprint of evaporative data center cooling
+# Five climate classes govern global data center water and energy
 
-Code and data for the article "Five climate classes govern data center cooling water and
-energy" (under review). This repository contains the thermodynamic model package, the
+Code and data for the article "Five climate classes govern global data center water and energy" (under review). This repository contains the thermodynamic model package, the
 validation gates, one script per analysis, and every analysis table and figure of the study,
 together with the documented execution order below, sufficient to reproduce every number and
 figure from the raw archive.
