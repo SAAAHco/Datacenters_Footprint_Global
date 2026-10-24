@@ -1,0 +1,46 @@
+{
+ "generated": "run world_pipeline.py",
+ "input": {
+  "path": "E:\\Datacenter_Global\\allData_World_cellSize_1.csv",
+  "size_bytes": 4710672806,
+  "rows": 99167636
+ },
+ "model": {
+  "package_version": "0.2.0",
+  "properties": "v2-table6-partialp",
+  "aux_term": "corrected dp*Vdot (250 Pa fan, 0.21 MPa pump)",
+  "closure": "reversible entropy null, bisection 60 iters",
+  "policy": {
+   "name": "water preferring economizer sequence with approach temperatures",
+   "a_wet_K": 5.0,
+   "a_dry_K": 8.0,
+   "dry": "T2 <= 18 - a_dry on the 27/18 loop",
+   "evaporative": "Twb <= 18 - a_wet on the 27/18 loop",
+   "chiller": "T4 = max(T4base, ceil(Twb + a_wet)), T1 = T4 + 24",
+   "wet_bulb": "adiabatic saturation temperature with the model's own fits"
+  },
+  "ladder": "residual: VCAP 0.15 m3/s/kW or infeasible, max_rungs 10",
+  "design_rule": "T4base = max(26, floor(p99.5 Twb + a_wet)+1), T1 = T4 + 24",
+  "states": "occ_chill = chiller at design set point, occ_chill_esc = chiller with reset above it"
+ },
+ "cleaning": {
+  "T_valid": [
+   -75.0,
+   60.0
+  ],
+  "Td_over_T_tol": 0.5,
+  "RH_valid": "(0, 100]",
+  "p_valid_hpa": [
+   450.0,
+   1085.0
+  ],
+  "p_trust_hpa": 25.0,
+  "p_record_window_hpa": 40.0,
+  "dedup": "one per station hour: completeness, then minute circular distance, then minute",
+  "humidity": "Td primary (Magnus), reported RH fallback",
+  "screen": {
+   "min_hours": 17532,
+   "min_month_coverage": 0.3
+  }
+ }
+}

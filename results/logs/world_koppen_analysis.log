@@ -1,0 +1,75 @@
+2055 stations in the class analysis, 26 classes
+metric  eta2_koppen  eta2_koppen_group  eta2_country
+   PUE     0.830139           0.620748      0.729542
+   WUE     0.860469           0.665359      0.756145
+[hist] row group 50/2081, 0s
+[hist] row group 100/2081, 1s
+[hist] row group 150/2081, 1s
+[hist] row group 200/2081, 1s
+[hist] row group 250/2081, 1s
+[hist] row group 300/2081, 1s
+[hist] row group 350/2081, 2s
+[hist] row group 400/2081, 2s
+[hist] row group 450/2081, 2s
+[hist] row group 500/2081, 2s
+[hist] row group 550/2081, 3s
+[hist] row group 600/2081, 3s
+[hist] row group 650/2081, 3s
+[hist] row group 700/2081, 3s
+[hist] row group 750/2081, 3s
+[hist] row group 800/2081, 4s
+[hist] row group 850/2081, 4s
+[hist] row group 900/2081, 4s
+[hist] row group 950/2081, 4s
+[hist] row group 1000/2081, 5s
+[hist] row group 1050/2081, 5s
+[hist] row group 1100/2081, 5s
+[hist] row group 1150/2081, 5s
+[hist] row group 1200/2081, 6s
+[hist] row group 1250/2081, 6s
+[hist] row group 1300/2081, 6s
+[hist] row group 1350/2081, 6s
+[hist] row group 1400/2081, 6s
+[hist] row group 1450/2081, 7s
+[hist] row group 1500/2081, 7s
+[hist] row group 1550/2081, 7s
+[hist] row group 1600/2081, 7s
+[hist] row group 1650/2081, 8s
+[hist] row group 1700/2081, 8s
+[hist] row group 1750/2081, 8s
+[hist] row group 1800/2081, 8s
+[hist] row group 1850/2081, 9s
+[hist] row group 1900/2081, 9s
+[hist] row group 1950/2081, 9s
+[hist] row group 2000/2081, 9s
+[hist] row group 2050/2081, 10s
+Scott bandwidth: 1.53 C x 3.32 %RH  (10s)
+56 (design, pressure) g maps to precompute
+g maps done (20s)
+          n   PUE_mae   PUE_p95    WUE_mae      WUE_p95
+koppen                                                 
+Cfa     329  1.499798  3.783709  15.594773    44.921663
+Dfb     273  0.804465  1.874832  14.180599    41.991058
+Cfb     267  0.952750  2.750447  21.468992   101.829554
+Dfc     202  0.389186  0.813561  21.500954   220.280064
+Aw      179  0.952613  1.896401   1.790683     4.883035
+BSk     139  1.342473  2.979899  25.541306    74.328498
+Csa      93  1.485436  4.101969  11.503351    51.235510
+BSh      83  2.753519  4.909469   9.971795    30.131032
+BWh      69  2.788991  5.266977   8.905602    26.219341
+Csb      64  0.949473  2.515216  21.367844   106.979370
+Dfa      63  0.400399  1.208076   6.334241    14.405828
+ET       59  0.175124  0.326201  75.963113  2374.722680
+Af       47  0.092456  0.509139   0.585431     2.195743
+Am       42  0.096872  0.556487   0.501330     1.769973
+Cwa      33  2.019930  3.794088  12.263237    40.513228
+BWk      29  1.350410  2.727893  14.834659    72.772264
+Dsc      25  0.188967  0.331335  26.426316   276.956936
+Cwb      16  2.963768  5.103331  12.059783   380.127100
+Cfc      12  0.241199  0.839251  51.462090  1065.098072
+As        9  0.124422  0.317536   0.387668     2.714637
+Dsb       8  0.690640  1.306586  29.107414    79.053167
+Dwa       7  0.545901  1.384342   5.170678    19.109140
+
+self convolution check (smoothing bias): PUE median 0.06%  WUE median 0.87%
+[done] 23s

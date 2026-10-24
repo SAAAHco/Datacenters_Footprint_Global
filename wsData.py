@@ -86,11 +86,11 @@ df_intersec = pd.read_csv("D:\\dataframe_WS_intersect.csv", sep=',')
 #%% Region definition
 
 # Map Texas
-file_Texas = r"<local_path>\Texas_State_Boundary_3751460527680346532\State_Boundary.shp"
+file_Texas = r"C:\Users\raulsanchez\1_UPM\NubeUPM\Personal\2025_TAMU\Work_group_TAMU\01_DC_heat_energy_and_water_evaluation\Publication_attemps\model_script\Texas_State_Boundary_3751460527680346532\State_Boundary.shp"
 map_Texas = gpd.read_file(file_Texas)
 
 # World map
-file_countries = r"<local_path>\World_Countries_(Generalized)_-7542350475356456390\World_Countries_Generalized.shp"
+file_countries = r"C:\Users\raulsanchez\1_UPM\NubeUPM\Personal\2025_TAMU\Work_group_TAMU\06_DC_footprint_map\World_Countries_(Generalized)_-7542350475356456390\World_Countries_Generalized.shp"
 worldmap_countries = gpd.read_file(file_countries)
 
 # List with weather stations    
@@ -99,7 +99,7 @@ weather_stations = pd.merge(weather_stations, df_intersec, left_on='WS_id', righ
 weather_stations = weather_stations.drop(columns=['WS'])
 
 # Regions classified by climate (Spherical squares 0.5º x 0.5º)
-# fileRegions = r"<local_path>\c1976_2000_0\c1976_2000.shp"
+# fileRegions = r"C:\Users\raulsanchez\1_UPM\NubeUPM\Personal\2025_TAMU\Work_group_TAMU\06_DC_footprint_map\c1976_2000_0\c1976_2000.shp"
 # map_regions = gpd.read_file(fileRegions)
 # Adding area of the polygons
 # map_regions['area'] = map_regions['geometry'].area

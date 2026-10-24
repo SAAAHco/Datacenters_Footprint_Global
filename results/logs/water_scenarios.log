@@ -1,0 +1,29 @@
+EWIF built for 157 countries; world average 1.77 / 1.14 L/kWh (incl / excl hydro)
+stations on world average EWIF (unmapped prefix or no mix data): 55 (2.6%)
+
+labeled water scenarios (L/kWh of ITE; means over stations):
+  scope  WUE_evap  makeup_coc3  makeup_coc5  makeup_coc10  source_incl_hydro  source_excl_hydro  consumption_incl  consumption_excl  water_100MW_base_ML  water_100MW_consumption_ML
+  world     0.708        1.062        0.885         0.787              2.028              0.958             2.736             1.666              620.558                    2398.428
+class 1     0.291        0.437        0.364         0.323              2.271              0.855             2.562             1.146              255.209                    2245.921
+class 2     0.660        0.991        0.826         0.734              1.672              1.083             2.333             1.744              578.957                    2045.071
+class 3     1.002        1.504        1.253         1.114              1.686              1.062             2.689             2.064              878.788                    2356.811
+class 4     1.258        1.887        1.572         1.398              2.575              0.796             3.833             2.054             1102.608                    3359.886
+
+countries (n>=10) by source water intensity (incl hydro):
+        n  EWIF   src  evap
+iso3                       
+NOR    34  4.01  4.08  0.19
+ISL    13  3.58  3.63  0.05
+COL    13  3.10  3.52  1.22
+BRA   214  2.75  3.11  1.22
+CAN   253  3.03  3.10  0.30
+NZL    21  2.86  2.96  0.55
+SWE    23  2.46  2.51  0.26
+FRA    51  2.22  2.33  0.60
+MYS    13  1.88  2.18  1.27
+ROU    22  2.08  2.17  0.52
+IND    11  1.88  2.15  1.22
+CHN    11  1.89  2.04  0.82
+
+note: the source term EXCEEDS on site evaporation wherever the grid is hydro or
+thermal heavy; the base case remains on site consumptive evaporation only.

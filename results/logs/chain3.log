@@ -1,0 +1,7 @@
+[figures] running ['make_world_figs', 'make_tier_figs', 'make_ms_figs', 'make_method_fig', 'make_si_fig3'] (0s)
+  make_world_figs: exit 0  | figures written
+  make_tier_figs: exit 1  |   File "C:\Users\workt\anaconda3\Lib\site-packages\pandas\core\indexes\base.py", line 3819, in get_loc /     raise KeyError(key) from err / KeyError: 'WUE_eq23'
+  make_ms_figs: exit 0  | The PostScript backend does not support transparency; partially transparent artists will be rendered opaque. / The PostScript backend does not support transparency; partially transparent artists will be rendered opaque. / revised manuscript figures written to E:\Datacenter_Global\results_world\Journal
+  make_method_fig: exit 0  | written E:\Datacenter_Global\results_world\Journal\SuppFig5_method.png
+  make_si_fig3: exit 0  | written E:\Datacenter_Global\results_world\fig_koppen_footprint_grouped.png classes: ['Af', 'Am', 'Aw', 'BSh', 'BSk', 'BWh', 'BWk', 'Cfa', 'Cfb', 'Csa', 'Csb', 'Cwa', 'Dfa', 'Dfb', 'Dfc', 'Dsc', 'ET']
+[figures] FAILED: ['make_tier_figs']; chain stopped

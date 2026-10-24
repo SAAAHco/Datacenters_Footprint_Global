@@ -1,0 +1,39 @@
+histograms for 2081 stations (14s)
+56 footprint maps (28s)
+scenario table written (40s)
+base scenario vs production record level: median |dPUE| 0.03%  |dWUE| 0.65%  (convolution bias, expected small)
+
+world means by scenario (2,081 stations, current designs):
+scenario  dT    PUE    WUE  occ_free  occ_evap  occ_chill  occ_esc  design_eroded  lost_mass_max
+    base 0.0 1.0666 0.7141   42.4568   19.2341    38.1488   0.1603            118            0.0
+ constRH 1.0 1.0711 0.7515   39.6278   18.8040    40.7932   0.7750           1110            0.0
+ constRH 2.0 1.0757 0.7887   36.8431   18.2881    42.1660   2.7028           1286            0.0
+ constRH 3.0 1.0804 0.8257   34.0901   17.7828    41.7887   6.3384           1415            0.0
+ constTd 1.0 1.0684 0.7524   39.6278   20.6880    39.4354   0.2488            380            0.0
+ constTd 2.0 1.0703 0.7907   36.8431   22.0715    40.6921   0.3933            646            0.0
+ constTd 3.0 1.0722 0.8290   34.0901   23.3697    41.9496   0.5905            954            0.0
+class 1: base+0: PUE 1.0224 WUE 0.2968  |  constRH+2: PUE 1.0302 WUE 0.3845  |  constTd+2: PUE 1.0252 WUE 0.3853
+class 2: base+0: PUE 1.0512 WUE 0.6678  |  constRH+2: PUE 1.0620 WUE 0.7581  |  constTd+2: PUE 1.0557 WUE 0.7597
+class 3: base+0: PUE 1.0961 WUE 1.0117  |  constRH+2: PUE 1.1089 WUE 1.0939  |  constTd+2: PUE 1.1013 WUE 1.0960
+class 4: base+0: PUE 1.1448 WUE 1.2606  |  constRH+2: PUE 1.1508 WUE 1.2811  |  constTd+2: PUE 1.1475 WUE 1.2854
+
+class migration under the planner rule (rule vs rule), share of stations moving:
+  constRH +1C: moved 8.1%  (toward hotter classes 8.1%)
+  constRH +2C: moved 15.9%  (toward hotter classes 15.9%)
+constRH+2C  1.0  2.0  3.0  4.0
+base                          
+1.0         452  150    0    0
+2.0           0  503  142    0
+3.0           0    0  390   38
+4.0           0    0    0  406
+  constRH +3C: moved 23.5%  (toward hotter classes 23.5%)
+  constTd +1C: moved 3.9%  (toward hotter classes 3.9%)
+  constTd +2C: moved 8.3%  (toward hotter classes 8.3%)
+constTd+2C  1.0  2.0  3.0  4.0
+base                          
+1.0         511   91    0    0
+2.0           0  581   64    0
+3.0           0    0  410   18
+4.0           0    0    0  406
+  constTd +3C: moved 12.8%  (toward hotter classes 12.8%)
+[done] 40s

@@ -1,0 +1,15 @@
+[analyses] running ['world_analysis', 'closure_check', 'gsa_world', 'design_optimization', 'warming_scenarios', 'aqueduct_overlay', 'precip_phase', 'classification_hardening', 'representativeness', 'vcap_rederive', 'water_scenarios', 'load_profiles', 'approach_stats'] (0s)
+  world_analysis: exit 0  | [annual] row group 2075/2081, 83s /  / [done] 83s  countries 139  annual rows 2081  r_et0 median 0.91
+  closure_check: exit 0  | 2.00        1.0092       1.0162        1.1618       1.2802         1.1507        1.1515         1.2695        1.2087 / 3.00        1.0092       1.0116        1.1618       1.1713         1.1507        1.1509         1.2695        1.2151 / [done] 97s
+  gsa_world: exit 1  |     draws[k][i] = o[k] /                   ~^^^ / KeyError: ('PUE', 5)
+  design_optimization: exit 0  |   class 3: PUE 1.0121 (base 1.0954)  WUE 0.3895 (base 1.0025)  dry share 70%  chiller share 0.0% /   class 4: PUE 1.0117 (base 1.1442)  WUE 0.7438 (base 1.2578)  dry share 42%  chiller share 0.0% / [done] 281s
+  warming_scenarios: exit 0  | 4.0           0    0    0  406 /   constTd +3C: moved 12.8%  (toward hotter classes 12.8%) / [done] 40s
+  aqueduct_overlay: exit 0  | GM        18        33.3  0.5        401.4 /  / [done] 4s
+  precip_phase: exit 0  |  / stations with demand strongly in phase with ET0 (r_et0 > 0.5): 1024 /   of these, supply also in phase: 56%, supply anti phase: 17%
+  classification_hardening: exit 0  | |   |   |   |--- class: 4 /  / [done] 46s
+  representativeness: exit 0  | WUE: area weighted world mean 0.8178  (+15.53% vs panel) / area on group fallback (classes with under 5 stations): 5.75% / [done] 1s
+  vcap_rederive: exit 0  | re-derived bound: 2 x max healthy = 0.193  (current VCAP 0.15) / climate mass with healthy flow in (0.150, 0.193]: 0.0000% of panel hours (~0 records would change escalation status) / [done] 21s
+  water_scenarios: exit 0  |  / note: the source term EXCEEDS on site evaporation wherever the grid is hydro or / thermal heavy; the base case remains on site consumptive evaporation only.
+  load_profiles: exit 0  |  / night vs inference WUE: median -9.26%  p5 -24.05%  p95 -0.68% / [done] 12s
+  approach_stats: exit 0  | class 3  8697246    19.22     22.47      58.31                0.22                  0.37          1.21        0.01           5.25          3.25            9.25           4.75           14.75            8.75     15.86    38.22                     10.45                      7.30 / class 4 10540333     1.07      7.44      91.49                0.16                  0.18          1.13        0.00           4.25          3.25            7.25           4.75           13.25            6.75     21.06    40.08                      6.37                      1.01 / [done] 9s
+[analyses] FAILED: ['gsa_world']; chain stopped

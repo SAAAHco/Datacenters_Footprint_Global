@@ -1,0 +1,51 @@
+class climates built (8s)
+class design/pressure: {1: (26.0, 96228), 2: (26.0, 95875), 3: (30.0, 98909), 4: (30.0, 97709)}
+8320 climate cells over 5 classes
+baseline (grid, no residual ladder): world PUE 1.0681 WUE 0.7100  (production record level, class weighted: 1.0654 / 0.7036)
+Saltelli matrix: (13312, 11) (9s)
+  sobol 2000/13312, 52s
+  sobol 4000/13312, 95s
+  sobol 6000/13312, 139s
+  sobol 8000/13312, 184s
+  sobol 10000/13312, 228s
+  sobol 12000/13312, 272s
+evaluations with mean fan adder > 0.5: 0
+metric         param      S1  S1_conf     ST  ST_conf
+   PUE        COP c0  0.2214   0.0365 0.2386   0.0239
+   PUE COP c1 (Tchw)  0.2083   0.0398 0.2118   0.0236
+   PUE   COP c2 (T4)  0.2657   0.0382 0.2754   0.0253
+   PUE        dp air  0.0289   0.0142 0.0293   0.0029
+   PUE       dp loop  0.0082   0.0080 0.0085   0.0009
+   PUE      cp water  0.0031   0.0052 0.0028   0.0003
+   PUE   latent heat  0.0002   0.0008 0.0001   0.0000
+   PUE        cp air  0.0026   0.0034 0.0017   0.0002
+   PUE     ds vapour -0.0001   0.0006 0.0001   0.0000
+   PUE  approach wet  0.2333   0.0386 0.2424   0.0202
+   PUE  approach dry  0.0028   0.0052 0.0039   0.0005
+   WUE        COP c0  0.0000   0.0000 0.0000   0.0000
+   WUE COP c1 (Tchw)  0.0000   0.0000 0.0000   0.0000
+   WUE   COP c2 (T4)  0.0000   0.0000 0.0000   0.0000
+   WUE        dp air  0.0000   0.0000 0.0000   0.0000
+   WUE       dp loop  0.0000   0.0000 0.0000   0.0000
+   WUE      cp water  0.0001   0.0010 0.0001   0.0000
+   WUE   latent heat  0.0028   0.0047 0.0027   0.0003
+   WUE        cp air  0.0001   0.0009 0.0001   0.0000
+   WUE     ds vapour -0.0002   0.0007 0.0001   0.0000
+   WUE  approach wet  0.0010   0.0031 0.0014   0.0001
+   WUE  approach dry  0.9956   0.0684 0.9957   0.0589
+  lhs 1000/4096, 322s
+  lhs 2000/4096, 344s
+  lhs 3000/4096, 366s
+  lhs 4000/4096, 388s
+  scope metric  grid_baseline   mean     sd  rel_sd_pct  ci95_lo_rel_pct  ci95_hi_rel_pct  production_mean  production_ci_lo  production_ci_hi
+  world    PUE         1.0681 1.0692 0.0080      0.7446          -1.1796           1.7635           1.0654            1.0528            1.0842
+class 1    PUE         1.0227 1.0230 0.0034      0.3291          -0.5766           0.6951           1.0221            1.0162            1.0292
+class 2    PUE         1.0528 1.0536 0.0067      0.6343          -1.0263           1.4609           1.0507            1.0400            1.0661
+class 3    PUE         1.0993 1.1015 0.0121      1.1043          -1.6491           2.6363           1.0954            1.0773            1.1242
+class 4    PUE         1.1507 1.1529 0.0179      1.5538          -2.3000           3.7121           1.1442            1.1179            1.1867
+  world    WUE         0.7100 0.7100 0.0375      5.2847          -8.6201           8.9408           0.7036            0.6429            0.7665
+class 1    WUE         0.3015 0.3033 0.0454     15.0516         -22.9740          26.6196           0.2911            0.2243            0.3686
+class 2    WUE         0.6641 0.6640 0.0456      6.8657         -11.0089          11.5986           0.6605            0.5877            0.7371
+class 3    WUE         1.0117 1.0098 0.0417      4.1198          -7.2833           6.4472           1.0025            0.9295            1.0671
+class 4    WUE         1.2608 1.2597 0.0066      0.5274          -1.2492           0.7680           1.2578            1.2421            1.2675
+[done] 391s

@@ -1,0 +1,176 @@
+2081 screened stations, 139 countries
+row group 25/2081, 1s
+row group 50/2081, 2s
+row group 75/2081, 3s
+row group 100/2081, 4s
+row group 125/2081, 5s
+row group 150/2081, 6s
+row group 175/2081, 6s
+row group 200/2081, 7s
+row group 225/2081, 8s
+row group 250/2081, 9s
+row group 275/2081, 10s
+row group 300/2081, 11s
+row group 325/2081, 12s
+row group 350/2081, 12s
+row group 375/2081, 13s
+row group 400/2081, 14s
+row group 425/2081, 15s
+row group 450/2081, 16s
+row group 475/2081, 17s
+row group 500/2081, 17s
+row group 525/2081, 18s
+row group 550/2081, 19s
+row group 575/2081, 20s
+row group 600/2081, 21s
+row group 625/2081, 22s
+row group 650/2081, 23s
+row group 675/2081, 23s
+row group 700/2081, 24s
+row group 725/2081, 25s
+row group 750/2081, 26s
+row group 775/2081, 26s
+row group 800/2081, 27s
+row group 825/2081, 28s
+row group 850/2081, 29s
+row group 875/2081, 29s
+row group 900/2081, 30s
+row group 925/2081, 31s
+row group 950/2081, 32s
+row group 975/2081, 32s
+row group 1000/2081, 33s
+row group 1025/2081, 34s
+row group 1050/2081, 35s
+row group 1075/2081, 35s
+row group 1100/2081, 36s
+row group 1125/2081, 37s
+row group 1150/2081, 38s
+row group 1175/2081, 38s
+row group 1200/2081, 39s
+row group 1225/2081, 40s
+row group 1250/2081, 41s
+row group 1275/2081, 41s
+row group 1300/2081, 42s
+row group 1325/2081, 42s
+row group 1350/2081, 43s
+row group 1375/2081, 44s
+row group 1400/2081, 44s
+row group 1425/2081, 45s
+row group 1450/2081, 46s
+row group 1475/2081, 47s
+row group 1500/2081, 47s
+row group 1525/2081, 48s
+row group 1550/2081, 49s
+row group 1575/2081, 49s
+row group 1600/2081, 50s
+row group 1625/2081, 51s
+row group 1650/2081, 51s
+row group 1675/2081, 52s
+row group 1700/2081, 53s
+row group 1725/2081, 53s
+row group 1750/2081, 54s
+row group 1775/2081, 55s
+row group 1800/2081, 55s
+row group 1825/2081, 56s
+row group 1850/2081, 57s
+row group 1875/2081, 57s
+row group 1900/2081, 58s
+row group 1925/2081, 59s
+row group 1950/2081, 59s
+row group 1975/2081, 60s
+row group 2000/2081, 61s
+row group 2025/2081, 61s
+row group 2050/2081, 62s
+row group 2075/2081, 63s
+metric   Country   Station  Interannual  Seasonal  Diurnal  Synoptic  total_var
+   PUE 31.371376 13.099078     0.360859 27.335144 3.869544 23.963999   0.004689
+   WUE 26.107893  9.570291     0.246646 33.996170 8.864631 21.214370   0.382529
+         1h        1D        7D        MS        YS
+metric                                             
+PUE     1.0  0.657735  0.484992  0.389900  0.003959
+WUE     1.0  0.655649  0.547611  0.489764  0.002987
+[annual] row group 25/2081, 63s
+[annual] row group 50/2081, 64s
+[annual] row group 75/2081, 64s
+[annual] row group 100/2081, 64s
+[annual] row group 125/2081, 65s
+[annual] row group 150/2081, 65s
+[annual] row group 175/2081, 65s
+[annual] row group 200/2081, 66s
+[annual] row group 225/2081, 66s
+[annual] row group 250/2081, 66s
+[annual] row group 275/2081, 66s
+[annual] row group 300/2081, 67s
+[annual] row group 325/2081, 67s
+[annual] row group 350/2081, 67s
+[annual] row group 375/2081, 67s
+[annual] row group 400/2081, 68s
+[annual] row group 425/2081, 68s
+[annual] row group 450/2081, 68s
+[annual] row group 475/2081, 68s
+[annual] row group 500/2081, 69s
+[annual] row group 525/2081, 69s
+[annual] row group 550/2081, 69s
+[annual] row group 575/2081, 69s
+[annual] row group 600/2081, 70s
+[annual] row group 625/2081, 70s
+[annual] row group 650/2081, 70s
+[annual] row group 675/2081, 70s
+[annual] row group 700/2081, 70s
+[annual] row group 725/2081, 71s
+[annual] row group 750/2081, 71s
+[annual] row group 775/2081, 71s
+[annual] row group 800/2081, 71s
+[annual] row group 825/2081, 72s
+[annual] row group 850/2081, 72s
+[annual] row group 875/2081, 72s
+[annual] row group 900/2081, 72s
+[annual] row group 925/2081, 72s
+[annual] row group 950/2081, 73s
+[annual] row group 975/2081, 73s
+[annual] row group 1000/2081, 73s
+[annual] row group 1025/2081, 73s
+[annual] row group 1050/2081, 74s
+[annual] row group 1075/2081, 74s
+[annual] row group 1100/2081, 74s
+[annual] row group 1125/2081, 74s
+[annual] row group 1150/2081, 74s
+[annual] row group 1175/2081, 75s
+[annual] row group 1200/2081, 75s
+[annual] row group 1225/2081, 75s
+[annual] row group 1250/2081, 75s
+[annual] row group 1275/2081, 76s
+[annual] row group 1300/2081, 76s
+[annual] row group 1325/2081, 76s
+[annual] row group 1350/2081, 76s
+[annual] row group 1375/2081, 76s
+[annual] row group 1400/2081, 77s
+[annual] row group 1425/2081, 77s
+[annual] row group 1450/2081, 77s
+[annual] row group 1475/2081, 77s
+[annual] row group 1500/2081, 77s
+[annual] row group 1525/2081, 78s
+[annual] row group 1550/2081, 78s
+[annual] row group 1575/2081, 78s
+[annual] row group 1600/2081, 78s
+[annual] row group 1625/2081, 79s
+[annual] row group 1650/2081, 79s
+[annual] row group 1675/2081, 79s
+[annual] row group 1700/2081, 79s
+[annual] row group 1725/2081, 80s
+[annual] row group 1750/2081, 80s
+[annual] row group 1775/2081, 80s
+[annual] row group 1800/2081, 80s
+[annual] row group 1825/2081, 80s
+[annual] row group 1850/2081, 81s
+[annual] row group 1875/2081, 81s
+[annual] row group 1900/2081, 81s
+[annual] row group 1925/2081, 81s
+[annual] row group 1950/2081, 82s
+[annual] row group 1975/2081, 82s
+[annual] row group 2000/2081, 82s
+[annual] row group 2025/2081, 82s
+[annual] row group 2050/2081, 83s
+[annual] row group 2075/2081, 83s
+
+[done] 83s  countries 139  annual rows 2081  r_et0 median 0.91

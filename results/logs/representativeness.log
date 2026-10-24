@@ -1,0 +1,50 @@
+retained 2081, dropped 1298
+
+Koppen composition, retained vs dropped (top 12 by overall share):
+        retained_pct  dropped_pct  all3379_pct  bias_pp
+koppen                                                 
+Cfa            15.95         7.32        12.64     3.32
+Dfb            13.12        10.55        12.13     0.98
+Aw              8.65        15.25        11.19    -2.54
+Cfb            13.36         4.85        10.09     3.27
+BSk             6.68         7.86         7.13    -0.45
+Dfc             9.71         2.85         7.07     2.63
+BSh             3.99         5.55         4.59    -0.60
+Csa             4.47         4.47         4.47     0.00
+BWh             3.36         4.70         3.88    -0.51
+Cwa             1.59         7.47         3.85    -2.26
+Dfa             3.03         2.47         2.81     0.22
+BWk             1.39         4.70         2.66    -1.27
+total variation distance retained vs full selection: 12.1 percentage points
+
+latitude composition (percent):
+            retained  dropped
+lat_k                        
+(-70, -50]       0.3      0.4
+(-50, -30]       4.3      2.6
+(-30, -10]      12.3      8.6
+(-10, 10]        5.8     10.6
+(10, 30]         9.0     27.4
+(30, 50]        48.4     37.0
+(50, 70]        19.9     13.4
+
+PUE: panel 1.0661  composition corrected 1.0713  (+0.49%)
+
+WUE: panel 0.7079  composition corrected 0.7582  (+7.10%)
+
+land area 70S to 70N: 141.2 million km2 (1s); top classes:
+       area_km2  area_share_pct
+BWh  21180465.0           15.00
+Aw   17440376.0           12.35
+Dfc  14714343.0           10.42
+BSh   9561891.0            6.77
+Dfb   8691160.0            6.16
+Af    8089883.0            5.73
+BSk   7689569.0            5.45
+Cfa   7528304.0            5.33
+ET    6870653.0            4.87
+Am    5502313.0            3.90
+PUE: area weighted world mean 1.0782  (+1.13% vs panel)
+WUE: area weighted world mean 0.8178  (+15.53% vs panel)
+area on group fallback (classes with under 5 stations): 5.75%
+[done] 1s

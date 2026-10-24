@@ -1,0 +1,42 @@
+DC class threshold rules (normals in degC; classes 1..4; resubstitution accuracy 89.8%, spatially blocked accuracy 88.4% vs the full 6 feature clustering)
+
+|--- Td_mean <= 11.5
+|   |--- T_mean <= 11.5
+|   |   |--- T_mean <= 5.5
+|   |   |   |--- T_mean <= 3.0
+|   |   |   |   |--- class: 1
+|   |   |   |--- T_mean >  3.0
+|   |   |   |   |--- class: 1
+|   |   |--- T_mean >  5.5
+|   |   |   |--- T_range <= 22.5
+|   |   |   |   |--- class: 1
+|   |   |   |--- T_range >  22.5
+|   |   |   |   |--- class: 2
+|   |--- T_mean >  11.5
+|   |   |--- T_mean <= 19.0
+|   |   |   |--- T_range <= 17.5
+|   |   |   |   |--- class: 2
+|   |   |   |--- T_range >  17.5
+|   |   |   |   |--- class: 2
+|   |   |--- T_mean >  19.0
+|   |   |   |--- Td_mean <= 5.5
+|   |   |   |   |--- class: 2
+|   |   |   |--- Td_mean >  5.5
+|   |   |   |   |--- class: 3
+|--- Td_mean >  11.5
+|   |--- T_range <= 9.5
+|   |   |--- T_mean <= 19.5
+|   |   |   |--- class: 3
+|   |   |--- T_mean >  19.5
+|   |   |   |--- T_mean <= 21.0
+|   |   |   |   |--- class: 4
+|   |   |   |--- T_mean >  21.0
+|   |   |   |   |--- class: 4
+|   |--- T_range >  9.5
+|   |   |--- T_mean <= 25.0
+|   |   |   |--- T_mean <= 17.5
+|   |   |   |   |--- class: 2
+|   |   |   |--- T_mean >  17.5
+|   |   |   |   |--- class: 3
+|   |   |--- T_mean >  25.0
+|   |   |   |--- class: 4

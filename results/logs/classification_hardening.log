@@ -1,0 +1,62 @@
+2055 stations, k = 4, Koppen benchmark eta2 {'PUE': 0.8301393818851668, 'WUE': 0.860469193761337}
+(i) bootstrap: ARI median 0.478 (p5 0.398, p95 0.686); k = 4 in 47% of resamples; median station stability 0.70 (44s)
+(ii) split half (50 draws), held out half assigned from climate normals only:
+    tree:             PUE 0.830 +- 0.030   WUE 0.847 +- 0.036
+    nearest centroid: PUE 0.827 +- 0.021   WUE 0.803 +- 0.017
+    Koppen 26:        PUE 0.832 +- 0.008   WUE 0.863 +- 0.006
+(iii) blocked CV (105 blocks of 15 deg): tree accuracy 88.4%; eta2 of blocked labels PUE 0.886 WUE 0.863; class mean prediction error median 0.0106 kWh/kWh, 0.084 L/kWh
+(iv) tree: depth 4, min leaf 25, 14 leaves; resubstitution 89.8%, blocked 88.4%
+rule      1    2    3    4
+actual                    
+1       530  109    0    0
+2        32  706   17    0
+3         0   33  235    7
+4         0    0   12  374
+ dc_class   n  precision  recall  PUE_mae_rule  WUE_mae_rule  PUE_mae_true  WUE_mae_true
+        1 639     0.9431  0.8294        0.0095        0.1238        0.0068        0.1059
+        2 755     0.8325  0.9351        0.0135        0.1312        0.0136        0.1364
+        3 275     0.8902  0.8545        0.0144        0.0938        0.0146        0.0792
+        4 386     0.9816  0.9689        0.0142        0.0325        0.0142        0.0279
+
+|--- Td_mean <= 11.5
+|   |--- T_mean <= 11.5
+|   |   |--- T_mean <= 5.5
+|   |   |   |--- T_mean <= 3.0
+|   |   |   |   |--- class: 1
+|   |   |   |--- T_mean >  3.0
+|   |   |   |   |--- class: 1
+|   |   |--- T_mean >  5.5
+|   |   |   |--- T_range <= 22.5
+|   |   |   |   |--- class: 1
+|   |   |   |--- T_range >  22.5
+|   |   |   |   |--- class: 2
+|   |--- T_mean >  11.5
+|   |   |--- T_mean <= 19.0
+|   |   |   |--- T_range <= 17.5
+|   |   |   |   |--- class: 2
+|   |   |   |--- T_range >  17.5
+|   |   |   |   |--- class: 2
+|   |   |--- T_mean >  19.0
+|   |   |   |--- Td_mean <= 5.5
+|   |   |   |   |--- class: 2
+|   |   |   |--- Td_mean >  5.5
+|   |   |   |   |--- class: 3
+|--- Td_mean >  11.5
+|   |--- T_range <= 9.5
+|   |   |--- T_mean <= 19.5
+|   |   |   |--- class: 3
+|   |   |--- T_mean >  19.5
+|   |   |   |--- T_mean <= 21.0
+|   |   |   |   |--- class: 4
+|   |   |   |--- T_mean >  21.0
+|   |   |   |   |--- class: 4
+|   |--- T_range >  9.5
+|   |   |--- T_mean <= 25.0
+|   |   |   |--- T_mean <= 17.5
+|   |   |   |   |--- class: 2
+|   |   |   |--- T_mean >  17.5
+|   |   |   |   |--- class: 3
+|   |   |--- T_mean >  25.0
+|   |   |   |--- class: 4
+
+[done] 46s

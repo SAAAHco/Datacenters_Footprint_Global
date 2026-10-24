@@ -1,0 +1,19 @@
+[stage1] 99,167,636 raw rows, 3379 stations cleaned, 55s
+[stage2] 250 stations, 108s
+[stage2] 500 stations, 297s
+[stage2] 750 stations, 676s
+[stage2] 1000 stations, 783s
+[stage2] 1250 stations, 1209s
+[stage2] 1500 stations, 1534s
+[stage2] 1750 stations, 1797s
+[stage2] 2000 stations, 2079s
+[stage2] 2250 stations, 2429s
+[stage2] 2500 stations, 2684s
+[stage2] 2750 stations, 3006s
+[stage2] 3000 stations, 3460s
+[stage2] 3250 stations, 3732s
+
+[done] stations 3379, screened in 2081, out 1298, 3760s
+[done] world mean PUE 1.0661  WUE 0.7079  (station level, unweighted)
+[done] occupancy means: free 43.0%  evap 19.1%  chill 37.8%  esc 0.1%
+[done] reset records total 84,647  max reset 16 K  ladder climbs 18,421  infeasible left 0

@@ -1,0 +1,66 @@
+chain health: 18 logs, 17 problems
+  PROBLEM: analysis_run.log MISSING
+  PROBLEM: koppen_run.log MISSING
+  PROBLEM: dc_classification.log MISSING
+  PROBLEM: aqueduct.log MISSING
+  PROBLEM: stress_future.log MISSING
+  PROBLEM: precip_phase.log MISSING
+  PROBLEM: warming.log MISSING
+  PROBLEM: hardening.log MISSING
+  PROBLEM: closure_check.log MISSING
+  PROBLEM: gsa_world.log MISSING
+  PROBLEM: representativeness.log MISSING
+  PROBLEM: vcap.log MISSING
+  PROBLEM: water_scenarios.log MISSING
+  PROBLEM: design_opt.log MISSING
+  PROBLEM: load_profiles.log MISSING
+  PROBLEM: figs.log MISSING
+  PROBLEM: tier_figs.log MISSING
+verification checks: 11, review flags: 9
+  sheet station_results: (3379, 38)
+  sheet station_monthly: (24972, 7)
+  sheet station_koppen: (3379, 6)
+  sheet country_results: (139, 14)
+  sheet variance_decomp: (2, 8)
+  sheet horizon: (2, 6)
+  sheet koppen_class_table: (26, 15)
+  sheet koppen_correspondence: (2, 4)
+  sheet koppen_loo: (2048, 12)
+  sheet koppen_hellinger: (22, 4)
+  sheet dc_class_table: (4, 14)
+  sheet dc_classes: (2055, 13)
+  sheet dc_k_selection: (11, 4)
+  sheet dc_vs_koppen_crosstab: (4, 27)
+  sheet dc_loo: (2055, 9)
+  sheet hardening_bootstrap: (1, 9)
+  sheet hardening_splithalf: (50, 8)
+  sheet station_stability: (2055, 3)
+  sheet annual_benchmark: (2081, 9)
+  sheet precip_phase: (1032, 8)
+  sheet precip_monthly: (24972, 6)
+  sheet water_stress: (2081, 50)
+  sheet stress_summary: (7, 7)
+  sheet stress_dc_crosstab: (4, 8)
+  sheet country_stress: (31, 5)
+  sheet stress_peak_on_peak: (2081, 8)
+  sheet stress_future: (2081, 17)
+  sheet stress_future_summary: (6, 8)
+  sheet warming_summary: (7, 10)
+  sheet warming_scenarios: (14567, 17)
+  sheet water_scenarios_summary: (5, 11)
+  sheet water_scenarios_station: (2081, 14)
+  sheet ewif_country: (157, 5)
+  sheet design_policy_summary: (5, 10)
+  sheet design_policies: (2081, 12)
+  sheet design_frontier: (60, 4)
+  sheet design_t4_sweep: (36, 5)
+  sheet dlc_archetype: (2081, 8)
+  sheet load_profiles: (2081, 8)
+  sheet gsa_sobol: (22, 6)
+  sheet gsa_ci: (10, 11)
+  sheet representativeness: (4, 5)
+  sheet screen_bias: (30, 5)
+  sheet koppen_area_weights: (31, 3)
+  sheet vcap: (1, 9)
+SKIPPED (missing): ['closure_check']
+[done] E:\Datacenter_Global\results_world\World_Results_Master.xlsx (8.9 MB) in 12s

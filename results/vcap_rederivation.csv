@@ -1,0 +1,2 @@
+vcap_current,healthy_p50,healthy_p99,healthy_p999,healthy_max,vcap_rederived,mass_between_pct,records_affected_est,total_hours
+0.15,0.014427718229623705,0.05980795913057309,0.06981476489482989,0.09628229435497343,0.19256458870994686,0.0,0.0,65217135

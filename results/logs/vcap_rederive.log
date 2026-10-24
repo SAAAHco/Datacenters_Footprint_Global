@@ -1,0 +1,5 @@
+56 (design, pressure) groups, 65,217,135 panel hours (13s)
+healthy flow distribution (m3/s per kW): p50 0.0144  p99 0.0598  p99.9 0.0698  max 0.0963
+re-derived bound: 2 x max healthy = 0.193  (current VCAP 0.15)
+climate mass with healthy flow in (0.150, 0.193]: 0.0000% of panel hours (~0 records would change escalation status)
+[done] 21s

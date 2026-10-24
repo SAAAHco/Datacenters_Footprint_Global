@@ -1,0 +1,10 @@
+[classify] running ['assign_koppen'] (0s)
+  assign_koppen: exit 0  | Dwd      1 / SPM00008222 -> BSk / USW00023044 -> BWk
+[classify] running ['world_koppen_analysis'] (2s)
+  world_koppen_analysis: exit 0  |  / self convolution check (smoothing bias): PUE median 0.06%  WUE median 0.87% / [done] 23s
+[classify] running ['dc_classification'] (26s)
+  dc_classification: exit 0  |  / DC classes overall LOO median |dPUE| 0.91%  |dWUE| 0.077 L/kWh / [done] 37s
+[analyses] running ['world_analysis', 'closure_check', 'gsa_world', 'design_optimization', 'warming_scenarios', 'aqueduct_overlay', 'precip_phase', 'classification_hardening', 'representativeness', 'vcap_rederive', 'water_scenarios', 'load_profiles', 'approach_stats'] (63s)
+  world_analysis: exit 0  | [annual] row group 2075/2081, 78s /  / [done] 78s  countries 139  annual rows 2081  r_et0 median 0.91
+  closure_check: exit 0  | 2.00        1.0092       1.0162        1.1618       1.2802         1.1507        1.1515         1.2695        1.2087 / 3.00        1.0092       1.0116        1.1618       1.1713         1.1507        1.1509         1.2695        1.2151 / [done] 93s
+  gsa_world: exit 1  |   File "C:\Users\workt\anaconda3\Lib\site-packages\pandas\core\indexing.py", line 1686, in _validate_integer /     raise IndexError("single positional indexer is out-of-bounds") / IndexError: single positional indexer is out-of-bounds

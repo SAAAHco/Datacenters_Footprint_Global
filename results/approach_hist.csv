@@ -1,0 +1,976 @@
+scope,variable,bin_lo,bin_hi,hours
+world,approach_evap,0.0,0.5,0
+world,approach_evap,0.5,1.0,0
+world,approach_evap,1.0,1.5,0
+world,approach_evap,1.5,2.0,0
+world,approach_evap,2.0,2.5,0
+world,approach_evap,2.5,3.0,0
+world,approach_evap,3.0,3.5,1264723
+world,approach_evap,3.5,4.0,1241399
+world,approach_evap,4.0,4.5,1275869
+world,approach_evap,4.5,5.0,1252693
+world,approach_evap,5.0,5.5,1158253
+world,approach_evap,5.5,6.0,1022460
+world,approach_evap,6.0,6.5,895043
+world,approach_evap,6.5,7.0,776769
+world,approach_evap,7.0,7.5,663145
+world,approach_evap,7.5,8.0,565254
+world,approach_evap,8.0,8.5,485623
+world,approach_evap,8.5,9.0,416174
+world,approach_evap,9.0,9.5,351705
+world,approach_evap,9.5,10.0,295372
+world,approach_evap,10.0,10.5,245712
+world,approach_evap,10.5,11.0,200645
+world,approach_evap,11.0,11.5,158461
+world,approach_evap,11.5,12.0,121608
+world,approach_evap,12.0,12.5,88469
+world,approach_evap,12.5,13.0,61549
+world,approach_evap,13.0,13.5,40469
+world,approach_evap,13.5,14.0,25025
+world,approach_evap,14.0,14.5,14190
+world,approach_evap,14.5,15.0,7051
+world,approach_evap,15.0,15.5,3117
+world,approach_evap,15.5,16.0,1178
+world,approach_evap,16.0,16.5,368
+world,approach_evap,16.5,17.0,103
+world,approach_evap,17.0,17.5,19
+world,approach_evap,17.5,18.0,2
+world,approach_evap,18.0,18.5,0
+world,approach_evap,18.5,19.0,0
+world,approach_evap,19.0,19.5,0
+world,approach_evap,19.5,20.0,0
+world,approach_evap,20.0,20.5,0
+world,approach_evap,20.5,21.0,0
+world,approach_evap,21.0,21.5,0
+world,approach_evap,21.5,22.0,0
+world,approach_evap,22.0,22.5,0
+world,approach_evap,22.5,23.0,0
+world,approach_evap,23.0,23.5,0
+world,approach_evap,23.5,24.0,0
+world,approach_evap,24.0,24.5,0
+world,approach_evap,24.5,25.0,0
+world,approach_evap,25.0,25.5,0
+world,approach_evap,25.5,26.0,0
+world,approach_evap,26.0,26.5,0
+world,approach_evap,26.5,27.0,0
+world,approach_evap,27.0,27.5,0
+world,approach_evap,27.5,28.0,0
+world,approach_evap,28.0,28.5,0
+world,approach_evap,28.5,29.0,0
+world,approach_evap,29.0,29.5,0
+world,approach_evap,29.5,30.0,0
+world,approach_chill,0.0,0.5,0
+world,approach_chill,0.5,1.0,0
+world,approach_chill,1.0,1.5,0
+world,approach_chill,1.5,2.0,0
+world,approach_chill,2.0,2.5,0
+world,approach_chill,2.5,3.0,0
+world,approach_chill,3.0,3.5,149383
+world,approach_chill,3.5,4.0,338564
+world,approach_chill,4.0,4.5,530836
+world,approach_chill,4.5,5.0,862576
+world,approach_chill,5.0,5.5,1192534
+world,approach_chill,5.5,6.0,1444754
+world,approach_chill,6.0,6.5,1623955
+world,approach_chill,6.5,7.0,1669570
+world,approach_chill,7.0,7.5,1704469
+world,approach_chill,7.5,8.0,1638087
+world,approach_chill,8.0,8.5,1586822
+world,approach_chill,8.5,9.0,1508093
+world,approach_chill,9.0,9.5,1483940
+world,approach_chill,9.5,10.0,1450900
+world,approach_chill,10.0,10.5,1466479
+world,approach_chill,10.5,11.0,1453131
+world,approach_chill,11.0,11.5,767709
+world,approach_chill,11.5,12.0,716975
+world,approach_chill,12.0,12.5,544975
+world,approach_chill,12.5,13.0,514090
+world,approach_chill,13.0,13.5,394213
+world,approach_chill,13.5,14.0,380550
+world,approach_chill,14.0,14.5,261874
+world,approach_chill,14.5,15.0,252007
+world,approach_chill,15.0,15.5,122992
+world,approach_chill,15.5,16.0,116811
+world,approach_chill,16.0,16.5,49079
+world,approach_chill,16.5,17.0,45527
+world,approach_chill,17.0,17.5,22606
+world,approach_chill,17.5,18.0,21621
+world,approach_chill,18.0,18.5,10024
+world,approach_chill,18.5,19.0,9737
+world,approach_chill,19.0,19.5,5080
+world,approach_chill,19.5,20.0,4234
+world,approach_chill,20.0,20.5,554
+world,approach_chill,20.5,21.0,502
+world,approach_chill,21.0,21.5,426
+world,approach_chill,21.5,22.0,435
+world,approach_chill,22.0,22.5,0
+world,approach_chill,22.5,23.0,0
+world,approach_chill,23.0,23.5,0
+world,approach_chill,23.5,24.0,0
+world,approach_chill,24.0,24.5,0
+world,approach_chill,24.5,25.0,0
+world,approach_chill,25.0,25.5,0
+world,approach_chill,25.5,26.0,0
+world,approach_chill,26.0,26.5,0
+world,approach_chill,26.5,27.0,0
+world,approach_chill,27.0,27.5,0
+world,approach_chill,27.5,28.0,0
+world,approach_chill,28.0,28.5,0
+world,approach_chill,28.5,29.0,0
+world,approach_chill,29.0,29.5,0
+world,approach_chill,29.5,30.0,0
+world,reset_K,-0.5,0.5,24260323
+world,reset_K,0.5,1.5,70918
+world,reset_K,1.5,2.5,11947
+world,reset_K,2.5,3.5,2234
+world,reset_K,3.5,4.5,418
+world,reset_K,4.5,5.5,128
+world,reset_K,5.5,6.5,55
+world,reset_K,6.5,7.5,24
+world,reset_K,7.5,8.5,26
+world,reset_K,8.5,9.5,19
+world,reset_K,9.5,10.5,9
+world,reset_K,10.5,11.5,6
+world,reset_K,11.5,12.5,2
+world,reset_K,12.5,13.5,1
+world,reset_K,13.5,14.5,4
+world,margin_dry,0.0,0.5,0
+world,margin_dry,0.5,1.0,0
+world,margin_dry,1.0,1.5,0
+world,margin_dry,1.5,2.0,0
+world,margin_dry,2.0,2.5,0
+world,margin_dry,2.5,3.0,0
+world,margin_dry,3.0,3.5,0
+world,margin_dry,3.5,4.0,0
+world,margin_dry,4.0,4.5,0
+world,margin_dry,4.5,5.0,0
+world,margin_dry,5.0,5.5,1041547
+world,margin_dry,5.5,6.0,859466
+world,margin_dry,6.0,6.5,1042987
+world,margin_dry,6.5,7.0,838395
+world,margin_dry,7.0,7.5,1005386
+world,margin_dry,7.5,8.0,539592
+world,margin_dry,8.0,8.5,1008243
+world,margin_dry,8.5,9.0,798083
+world,margin_dry,9.0,9.5,928029
+world,margin_dry,9.5,10.0,778796
+world,margin_dry,10.0,10.5,889487
+world,margin_dry,10.5,11.0,740820
+world,margin_dry,11.0,11.5,854917
+world,margin_dry,11.5,12.0,707121
+world,margin_dry,12.0,12.5,814354
+world,margin_dry,12.5,13.0,428099
+world,margin_dry,13.0,13.5,773421
+world,margin_dry,13.5,14.0,649479
+world,margin_dry,14.0,14.5,734665
+world,margin_dry,14.5,15.0,625603
+world,margin_dry,15.0,15.5,726625
+world,margin_dry,15.5,16.0,616703
+world,margin_dry,16.0,16.5,700430
+world,margin_dry,16.5,17.0,615017
+world,margin_dry,17.0,17.5,706973
+world,margin_dry,17.5,18.0,384404
+world,margin_dry,18.0,18.5,691089
+world,margin_dry,18.5,19.0,517025
+world,margin_dry,19.0,19.5,561617
+world,margin_dry,19.5,20.0,442256
+world,margin_dry,20.0,20.5,476776
+world,margin_dry,20.5,21.0,379951
+world,margin_dry,21.0,21.5,401619
+world,margin_dry,21.5,22.0,319750
+world,margin_dry,22.0,22.5,339730
+world,margin_dry,22.5,23.0,160390
+world,margin_dry,23.0,23.5,296020
+world,margin_dry,23.5,24.0,246562
+world,margin_dry,24.0,24.5,260523
+world,margin_dry,24.5,25.0,221499
+world,margin_dry,25.0,25.5,232220
+world,margin_dry,25.5,26.0,185047
+world,margin_dry,26.0,26.5,202113
+world,margin_dry,26.5,27.0,164012
+world,margin_dry,27.0,27.5,174943
+world,margin_dry,27.5,28.0,89780
+world,margin_dry,28.0,28.5,159466
+world,margin_dry,28.5,29.0,134714
+world,margin_dry,29.0,29.5,142392
+world,margin_dry,29.5,30.0,2449479
+class 1,approach_evap,0.0,0.5,0
+class 1,approach_evap,0.5,1.0,0
+class 1,approach_evap,1.0,1.5,0
+class 1,approach_evap,1.5,2.0,0
+class 1,approach_evap,2.0,2.5,0
+class 1,approach_evap,2.5,3.0,0
+class 1,approach_evap,3.0,3.5,307125
+class 1,approach_evap,3.5,4.0,329817
+class 1,approach_evap,4.0,4.5,359704
+class 1,approach_evap,4.5,5.0,377708
+class 1,approach_evap,5.0,5.5,358681
+class 1,approach_evap,5.5,6.0,319814
+class 1,approach_evap,6.0,6.5,281611
+class 1,approach_evap,6.5,7.0,243854
+class 1,approach_evap,7.0,7.5,205982
+class 1,approach_evap,7.5,8.0,172167
+class 1,approach_evap,8.0,8.5,143536
+class 1,approach_evap,8.5,9.0,119495
+class 1,approach_evap,9.0,9.5,96845
+class 1,approach_evap,9.5,10.0,78090
+class 1,approach_evap,10.0,10.5,61645
+class 1,approach_evap,10.5,11.0,48200
+class 1,approach_evap,11.0,11.5,35803
+class 1,approach_evap,11.5,12.0,26616
+class 1,approach_evap,12.0,12.5,18529
+class 1,approach_evap,12.5,13.0,12151
+class 1,approach_evap,13.0,13.5,7525
+class 1,approach_evap,13.5,14.0,4340
+class 1,approach_evap,14.0,14.5,2527
+class 1,approach_evap,14.5,15.0,1343
+class 1,approach_evap,15.0,15.5,800
+class 1,approach_evap,15.5,16.0,471
+class 1,approach_evap,16.0,16.5,218
+class 1,approach_evap,16.5,17.0,81
+class 1,approach_evap,17.0,17.5,16
+class 1,approach_evap,17.5,18.0,2
+class 1,approach_evap,18.0,18.5,0
+class 1,approach_evap,18.5,19.0,0
+class 1,approach_evap,19.0,19.5,0
+class 1,approach_evap,19.5,20.0,0
+class 1,approach_evap,20.0,20.5,0
+class 1,approach_evap,20.5,21.0,0
+class 1,approach_evap,21.0,21.5,0
+class 1,approach_evap,21.5,22.0,0
+class 1,approach_evap,22.0,22.5,0
+class 1,approach_evap,22.5,23.0,0
+class 1,approach_evap,23.0,23.5,0
+class 1,approach_evap,23.5,24.0,0
+class 1,approach_evap,24.0,24.5,0
+class 1,approach_evap,24.5,25.0,0
+class 1,approach_evap,25.0,25.5,0
+class 1,approach_evap,25.5,26.0,0
+class 1,approach_evap,26.0,26.5,0
+class 1,approach_evap,26.5,27.0,0
+class 1,approach_evap,27.0,27.5,0
+class 1,approach_evap,27.5,28.0,0
+class 1,approach_evap,28.0,28.5,0
+class 1,approach_evap,28.5,29.0,0
+class 1,approach_evap,29.0,29.5,0
+class 1,approach_evap,29.5,30.0,0
+class 1,approach_chill,0.0,0.5,0
+class 1,approach_chill,0.5,1.0,0
+class 1,approach_chill,1.0,1.5,0
+class 1,approach_chill,1.5,2.0,0
+class 1,approach_chill,2.0,2.5,0
+class 1,approach_chill,2.5,3.0,0
+class 1,approach_chill,3.0,3.5,5148
+class 1,approach_chill,3.5,4.0,8694
+class 1,approach_chill,4.0,4.5,9994
+class 1,approach_chill,4.5,5.0,15532
+class 1,approach_chill,5.0,5.5,23183
+class 1,approach_chill,5.5,6.0,32599
+class 1,approach_chill,6.0,6.5,45629
+class 1,approach_chill,6.5,7.0,60191
+class 1,approach_chill,7.0,7.5,79018
+class 1,approach_chill,7.5,8.0,100932
+class 1,approach_chill,8.0,8.5,125263
+class 1,approach_chill,8.5,9.0,152822
+class 1,approach_chill,9.0,9.5,181663
+class 1,approach_chill,9.5,10.0,213076
+class 1,approach_chill,10.0,10.5,244617
+class 1,approach_chill,10.5,11.0,276878
+class 1,approach_chill,11.0,11.5,1719
+class 1,approach_chill,11.5,12.0,1067
+class 1,approach_chill,12.0,12.5,10
+class 1,approach_chill,12.5,13.0,1
+class 1,approach_chill,13.0,13.5,0
+class 1,approach_chill,13.5,14.0,0
+class 1,approach_chill,14.0,14.5,0
+class 1,approach_chill,14.5,15.0,0
+class 1,approach_chill,15.0,15.5,0
+class 1,approach_chill,15.5,16.0,0
+class 1,approach_chill,16.0,16.5,0
+class 1,approach_chill,16.5,17.0,0
+class 1,approach_chill,17.0,17.5,0
+class 1,approach_chill,17.5,18.0,0
+class 1,approach_chill,18.0,18.5,0
+class 1,approach_chill,18.5,19.0,0
+class 1,approach_chill,19.0,19.5,0
+class 1,approach_chill,19.5,20.0,0
+class 1,approach_chill,20.0,20.5,0
+class 1,approach_chill,20.5,21.0,0
+class 1,approach_chill,21.0,21.5,0
+class 1,approach_chill,21.5,22.0,0
+class 1,approach_chill,22.0,22.5,0
+class 1,approach_chill,22.5,23.0,0
+class 1,approach_chill,23.0,23.5,0
+class 1,approach_chill,23.5,24.0,0
+class 1,approach_chill,24.0,24.5,0
+class 1,approach_chill,24.5,25.0,0
+class 1,approach_chill,25.0,25.5,0
+class 1,approach_chill,25.5,26.0,0
+class 1,approach_chill,26.0,26.5,0
+class 1,approach_chill,26.5,27.0,0
+class 1,approach_chill,27.0,27.5,0
+class 1,approach_chill,27.5,28.0,0
+class 1,approach_chill,28.0,28.5,0
+class 1,approach_chill,28.5,29.0,0
+class 1,approach_chill,29.0,29.5,0
+class 1,approach_chill,29.5,30.0,0
+class 1,reset_K,-0.5,0.5,1573883
+class 1,reset_K,0.5,1.5,3143
+class 1,reset_K,1.5,2.5,752
+class 1,reset_K,2.5,3.5,207
+class 1,reset_K,3.5,4.5,35
+class 1,reset_K,4.5,5.5,7
+class 1,reset_K,5.5,6.5,4
+class 1,reset_K,6.5,7.5,1
+class 1,reset_K,7.5,8.5,3
+class 1,reset_K,8.5,9.5,0
+class 1,reset_K,9.5,10.5,0
+class 1,reset_K,10.5,11.5,0
+class 1,reset_K,11.5,12.5,0
+class 1,reset_K,12.5,13.5,0
+class 1,reset_K,13.5,14.5,1
+class 1,margin_dry,0.0,0.5,0
+class 1,margin_dry,0.5,1.0,0
+class 1,margin_dry,1.0,1.5,0
+class 1,margin_dry,1.5,2.0,0
+class 1,margin_dry,2.0,2.5,0
+class 1,margin_dry,2.5,3.0,0
+class 1,margin_dry,3.0,3.5,0
+class 1,margin_dry,3.5,4.0,0
+class 1,margin_dry,4.0,4.5,0
+class 1,margin_dry,4.5,5.0,0
+class 1,margin_dry,5.0,5.5,383615
+class 1,margin_dry,5.5,6.0,350316
+class 1,margin_dry,6.0,6.5,403199
+class 1,margin_dry,6.5,7.0,360460
+class 1,margin_dry,7.0,7.5,409132
+class 1,margin_dry,7.5,8.0,285401
+class 1,margin_dry,8.0,8.5,420943
+class 1,margin_dry,8.5,9.0,366350
+class 1,margin_dry,9.0,9.5,405567
+class 1,margin_dry,9.5,10.0,363198
+class 1,margin_dry,10.0,10.5,401298
+class 1,margin_dry,10.5,11.0,355723
+class 1,margin_dry,11.0,11.5,397175
+class 1,margin_dry,11.5,12.0,347345
+class 1,margin_dry,12.0,12.5,386608
+class 1,margin_dry,12.5,13.0,260777
+class 1,margin_dry,13.0,13.5,374802
+class 1,margin_dry,13.5,14.0,330373
+class 1,margin_dry,14.0,14.5,364494
+class 1,margin_dry,14.5,15.0,326588
+class 1,margin_dry,15.0,15.5,369977
+class 1,margin_dry,15.5,16.0,328765
+class 1,margin_dry,16.0,16.5,369698
+class 1,margin_dry,16.5,17.0,335534
+class 1,margin_dry,17.0,17.5,385350
+class 1,margin_dry,17.5,18.0,270728
+class 1,margin_dry,18.0,18.5,379021
+class 1,margin_dry,18.5,19.0,291613
+class 1,margin_dry,19.0,19.5,312262
+class 1,margin_dry,19.5,20.0,256151
+class 1,margin_dry,20.0,20.5,274151
+class 1,margin_dry,20.5,21.0,224756
+class 1,margin_dry,21.0,21.5,236853
+class 1,margin_dry,21.5,22.0,193507
+class 1,margin_dry,22.0,22.5,204599
+class 1,margin_dry,22.5,23.0,123361
+class 1,margin_dry,23.0,23.5,182875
+class 1,margin_dry,23.5,24.0,154638
+class 1,margin_dry,24.0,24.5,165098
+class 1,margin_dry,24.5,25.0,141789
+class 1,margin_dry,25.0,25.5,150588
+class 1,margin_dry,25.5,26.0,124045
+class 1,margin_dry,26.0,26.5,136230
+class 1,margin_dry,26.5,27.0,113897
+class 1,margin_dry,27.0,27.5,121871
+class 1,margin_dry,27.5,28.0,74694
+class 1,margin_dry,28.0,28.5,112870
+class 1,margin_dry,28.5,29.0,97583
+class 1,margin_dry,29.0,29.5,104446
+class 1,margin_dry,29.5,30.0,2069541
+class 2,approach_evap,0.0,0.5,0
+class 2,approach_evap,0.5,1.0,0
+class 2,approach_evap,1.0,1.5,0
+class 2,approach_evap,1.5,2.0,0
+class 2,approach_evap,2.0,2.5,0
+class 2,approach_evap,2.5,3.0,0
+class 2,approach_evap,3.0,3.5,555527
+class 2,approach_evap,3.5,4.0,545241
+class 2,approach_evap,4.0,4.5,567159
+class 2,approach_evap,4.5,5.0,551858
+class 2,approach_evap,5.0,5.5,521005
+class 2,approach_evap,5.5,6.0,468210
+class 2,approach_evap,6.0,6.5,419876
+class 2,approach_evap,6.5,7.0,377146
+class 2,approach_evap,7.0,7.5,334643
+class 2,approach_evap,7.5,8.0,296567
+class 2,approach_evap,8.0,8.5,264143
+class 2,approach_evap,8.5,9.0,234090
+class 2,approach_evap,9.0,9.5,205262
+class 2,approach_evap,9.5,10.0,178145
+class 2,approach_evap,10.0,10.5,153331
+class 2,approach_evap,10.5,11.0,129465
+class 2,approach_evap,11.0,11.5,106411
+class 2,approach_evap,11.5,12.0,83839
+class 2,approach_evap,12.0,12.5,63050
+class 2,approach_evap,12.5,13.0,45453
+class 2,approach_evap,13.0,13.5,31100
+class 2,approach_evap,13.5,14.0,19882
+class 2,approach_evap,14.0,14.5,11362
+class 2,approach_evap,14.5,15.0,5633
+class 2,approach_evap,15.0,15.5,2306
+class 2,approach_evap,15.5,16.0,707
+class 2,approach_evap,16.0,16.5,150
+class 2,approach_evap,16.5,17.0,22
+class 2,approach_evap,17.0,17.5,3
+class 2,approach_evap,17.5,18.0,0
+class 2,approach_evap,18.0,18.5,0
+class 2,approach_evap,18.5,19.0,0
+class 2,approach_evap,19.0,19.5,0
+class 2,approach_evap,19.5,20.0,0
+class 2,approach_evap,20.0,20.5,0
+class 2,approach_evap,20.5,21.0,0
+class 2,approach_evap,21.0,21.5,0
+class 2,approach_evap,21.5,22.0,0
+class 2,approach_evap,22.0,22.5,0
+class 2,approach_evap,22.5,23.0,0
+class 2,approach_evap,23.0,23.5,0
+class 2,approach_evap,23.5,24.0,0
+class 2,approach_evap,24.0,24.5,0
+class 2,approach_evap,24.5,25.0,0
+class 2,approach_evap,25.0,25.5,0
+class 2,approach_evap,25.5,26.0,0
+class 2,approach_evap,26.0,26.5,0
+class 2,approach_evap,26.5,27.0,0
+class 2,approach_evap,27.0,27.5,0
+class 2,approach_evap,27.5,28.0,0
+class 2,approach_evap,28.0,28.5,0
+class 2,approach_evap,28.5,29.0,0
+class 2,approach_evap,29.0,29.5,0
+class 2,approach_evap,29.5,30.0,0
+class 2,approach_chill,0.0,0.5,0
+class 2,approach_chill,0.5,1.0,0
+class 2,approach_chill,1.0,1.5,0
+class 2,approach_chill,1.5,2.0,0
+class 2,approach_chill,2.0,2.5,0
+class 2,approach_chill,2.5,3.0,0
+class 2,approach_chill,3.0,3.5,58898
+class 2,approach_chill,3.5,4.0,106539
+class 2,approach_chill,4.0,4.5,119660
+class 2,approach_chill,4.5,5.0,164469
+class 2,approach_chill,5.0,5.5,212815
+class 2,approach_chill,5.5,6.0,257546
+class 2,approach_chill,6.0,6.5,301122
+class 2,approach_chill,6.5,7.0,335191
+class 2,approach_chill,7.0,7.5,378979
+class 2,approach_chill,7.5,8.0,412560
+class 2,approach_chill,8.0,8.5,451359
+class 2,approach_chill,8.5,9.0,476760
+class 2,approach_chill,9.0,9.5,509339
+class 2,approach_chill,9.5,10.0,533376
+class 2,approach_chill,10.0,10.5,556420
+class 2,approach_chill,10.5,11.0,568727
+class 2,approach_chill,11.0,11.5,276731
+class 2,approach_chill,11.5,12.0,267015
+class 2,approach_chill,12.0,12.5,180559
+class 2,approach_chill,12.5,13.0,174571
+class 2,approach_chill,13.0,13.5,121470
+class 2,approach_chill,13.5,14.0,118443
+class 2,approach_chill,14.0,14.5,72278
+class 2,approach_chill,14.5,15.0,68636
+class 2,approach_chill,15.0,15.5,23988
+class 2,approach_chill,15.5,16.0,22823
+class 2,approach_chill,16.0,16.5,2678
+class 2,approach_chill,16.5,17.0,2312
+class 2,approach_chill,17.0,17.5,619
+class 2,approach_chill,17.5,18.0,524
+class 2,approach_chill,18.0,18.5,550
+class 2,approach_chill,18.5,19.0,483
+class 2,approach_chill,19.0,19.5,652
+class 2,approach_chill,19.5,20.0,512
+class 2,approach_chill,20.0,20.5,44
+class 2,approach_chill,20.5,21.0,21
+class 2,approach_chill,21.0,21.5,2
+class 2,approach_chill,21.5,22.0,0
+class 2,approach_chill,22.0,22.5,0
+class 2,approach_chill,22.5,23.0,0
+class 2,approach_chill,23.0,23.5,0
+class 2,approach_chill,23.5,24.0,0
+class 2,approach_chill,24.0,24.5,0
+class 2,approach_chill,24.5,25.0,0
+class 2,approach_chill,25.0,25.5,0
+class 2,approach_chill,25.5,26.0,0
+class 2,approach_chill,26.0,26.5,0
+class 2,approach_chill,26.5,27.0,0
+class 2,approach_chill,27.0,27.5,0
+class 2,approach_chill,27.5,28.0,0
+class 2,approach_chill,28.0,28.5,0
+class 2,approach_chill,28.5,29.0,0
+class 2,approach_chill,29.0,29.5,0
+class 2,approach_chill,29.5,30.0,0
+class 2,reset_K,-0.5,0.5,6735426
+class 2,reset_K,0.5,1.5,34166
+class 2,reset_K,1.5,2.5,7338
+class 2,reset_K,2.5,3.5,1429
+class 2,reset_K,3.5,4.5,222
+class 2,reset_K,4.5,5.5,59
+class 2,reset_K,5.5,6.5,15
+class 2,reset_K,6.5,7.5,9
+class 2,reset_K,7.5,8.5,0
+class 2,reset_K,8.5,9.5,2
+class 2,reset_K,9.5,10.5,2
+class 2,reset_K,10.5,11.5,1
+class 2,reset_K,11.5,12.5,0
+class 2,reset_K,12.5,13.5,0
+class 2,reset_K,13.5,14.5,2
+class 2,margin_dry,0.0,0.5,0
+class 2,margin_dry,0.5,1.0,0
+class 2,margin_dry,1.0,1.5,0
+class 2,margin_dry,1.5,2.0,0
+class 2,margin_dry,2.0,2.5,0
+class 2,margin_dry,2.5,3.0,0
+class 2,margin_dry,3.0,3.5,0
+class 2,margin_dry,3.5,4.0,0
+class 2,margin_dry,4.0,4.5,0
+class 2,margin_dry,4.5,5.0,0
+class 2,margin_dry,5.0,5.5,468016
+class 2,margin_dry,5.5,6.0,377224
+class 2,margin_dry,6.0,6.5,473919
+class 2,margin_dry,6.5,7.0,365416
+class 2,margin_dry,7.0,7.5,453839
+class 2,margin_dry,7.5,8.0,194872
+class 2,margin_dry,8.0,8.5,456506
+class 2,margin_dry,8.5,9.0,341801
+class 2,margin_dry,9.0,9.5,412903
+class 2,margin_dry,9.5,10.0,332823
+class 2,margin_dry,10.0,10.5,394072
+class 2,margin_dry,10.5,11.0,315465
+class 2,margin_dry,11.0,11.5,377431
+class 2,margin_dry,11.5,12.0,299370
+class 2,margin_dry,12.0,12.5,360687
+class 2,margin_dry,12.5,13.0,142930
+class 2,margin_dry,13.0,13.5,343345
+class 2,margin_dry,13.5,14.0,277758
+class 2,margin_dry,14.0,14.5,327725
+class 2,margin_dry,14.5,15.0,265358
+class 2,margin_dry,15.0,15.5,319901
+class 2,margin_dry,15.5,16.0,259908
+class 2,margin_dry,16.0,16.5,302309
+class 2,margin_dry,16.5,17.0,256693
+class 2,margin_dry,17.0,17.5,298906
+class 2,margin_dry,17.5,18.0,110491
+class 2,margin_dry,18.0,18.5,291643
+class 2,margin_dry,18.5,19.0,210813
+class 2,margin_dry,19.0,19.5,235411
+class 2,margin_dry,19.5,20.0,175988
+class 2,margin_dry,20.0,20.5,193091
+class 2,margin_dry,20.5,21.0,147907
+class 2,margin_dry,21.0,21.5,157955
+class 2,margin_dry,21.5,22.0,121154
+class 2,margin_dry,22.0,22.5,130315
+class 2,margin_dry,22.5,23.0,36817
+class 2,margin_dry,23.0,23.5,109341
+class 2,margin_dry,23.5,24.0,88954
+class 2,margin_dry,24.0,24.5,92803
+class 2,margin_dry,24.5,25.0,77488
+class 2,margin_dry,25.0,25.5,79783
+class 2,margin_dry,25.5,26.0,59675
+class 2,margin_dry,26.0,26.5,64540
+class 2,margin_dry,26.5,27.0,49067
+class 2,margin_dry,27.0,27.5,52099
+class 2,margin_dry,27.5,28.0,15073
+class 2,margin_dry,28.0,28.5,45726
+class 2,margin_dry,28.5,29.0,36383
+class 2,margin_dry,29.0,29.5,37380
+class 2,margin_dry,29.5,30.0,378596
+class 3,approach_evap,0.0,0.5,0
+class 3,approach_evap,0.5,1.0,0
+class 3,approach_evap,1.0,1.5,0
+class 3,approach_evap,1.5,2.0,0
+class 3,approach_evap,2.0,2.5,0
+class 3,approach_evap,2.5,3.0,0
+class 3,approach_evap,3.0,3.5,228712
+class 3,approach_evap,3.5,4.0,214867
+class 3,approach_evap,4.0,4.5,219869
+class 3,approach_evap,4.5,5.0,212156
+class 3,approach_evap,5.0,5.5,190057
+class 3,approach_evap,5.5,6.0,164823
+class 3,approach_evap,6.0,6.5,141097
+class 3,approach_evap,6.5,7.0,118150
+class 3,approach_evap,7.0,7.5,96505
+class 3,approach_evap,7.5,8.0,78458
+class 3,approach_evap,8.0,8.5,65325
+class 3,approach_evap,8.5,9.0,53849
+class 3,approach_evap,9.0,9.5,44141
+class 3,approach_evap,9.5,10.0,35668
+class 3,approach_evap,10.0,10.5,28812
+class 3,approach_evap,10.5,11.0,21863
+class 3,approach_evap,11.0,11.5,15656
+class 3,approach_evap,11.5,12.0,10882
+class 3,approach_evap,12.0,12.5,6759
+class 3,approach_evap,12.5,13.0,3907
+class 3,approach_evap,13.0,13.5,1837
+class 3,approach_evap,13.5,14.0,801
+class 3,approach_evap,14.0,14.5,301
+class 3,approach_evap,14.5,15.0,74
+class 3,approach_evap,15.0,15.5,11
+class 3,approach_evap,15.5,16.0,0
+class 3,approach_evap,16.0,16.5,0
+class 3,approach_evap,16.5,17.0,0
+class 3,approach_evap,17.0,17.5,0
+class 3,approach_evap,17.5,18.0,0
+class 3,approach_evap,18.0,18.5,0
+class 3,approach_evap,18.5,19.0,0
+class 3,approach_evap,19.0,19.5,0
+class 3,approach_evap,19.5,20.0,0
+class 3,approach_evap,20.0,20.5,0
+class 3,approach_evap,20.5,21.0,0
+class 3,approach_evap,21.0,21.5,0
+class 3,approach_evap,21.5,22.0,0
+class 3,approach_evap,22.0,22.5,0
+class 3,approach_evap,22.5,23.0,0
+class 3,approach_evap,23.0,23.5,0
+class 3,approach_evap,23.5,24.0,0
+class 3,approach_evap,24.0,24.5,0
+class 3,approach_evap,24.5,25.0,0
+class 3,approach_evap,25.0,25.5,0
+class 3,approach_evap,25.5,26.0,0
+class 3,approach_evap,26.0,26.5,0
+class 3,approach_evap,26.5,27.0,0
+class 3,approach_evap,27.0,27.5,0
+class 3,approach_evap,27.5,28.0,0
+class 3,approach_evap,28.0,28.5,0
+class 3,approach_evap,28.5,29.0,0
+class 3,approach_evap,29.0,29.5,0
+class 3,approach_evap,29.5,30.0,0
+class 3,approach_chill,0.0,0.5,0
+class 3,approach_chill,0.5,1.0,0
+class 3,approach_chill,1.0,1.5,0
+class 3,approach_chill,1.5,2.0,0
+class 3,approach_chill,2.0,2.5,0
+class 3,approach_chill,2.5,3.0,0
+class 3,approach_chill,3.0,3.5,32106
+class 3,approach_chill,3.5,4.0,65910
+class 3,approach_chill,4.0,4.5,94147
+class 3,approach_chill,4.5,5.0,143336
+class 3,approach_chill,5.0,5.5,193416
+class 3,approach_chill,5.5,6.0,237477
+class 3,approach_chill,6.0,6.5,263495
+class 3,approach_chill,6.5,7.0,278657
+class 3,approach_chill,7.0,7.5,286614
+class 3,approach_chill,7.5,8.0,285186
+class 3,approach_chill,8.0,8.5,286989
+class 3,approach_chill,8.5,9.0,281724
+class 3,approach_chill,9.0,9.5,280491
+class 3,approach_chill,9.5,10.0,272306
+class 3,approach_chill,10.0,10.5,274851
+class 3,approach_chill,10.5,11.0,266537
+class 3,approach_chill,11.0,11.5,220366
+class 3,approach_chill,11.5,12.0,213609
+class 3,approach_chill,12.0,12.5,187583
+class 3,approach_chill,12.5,13.0,181730
+class 3,approach_chill,13.0,13.5,157687
+class 3,approach_chill,13.5,14.0,156264
+class 3,approach_chill,14.0,14.5,115362
+class 3,approach_chill,14.5,15.0,115854
+class 3,approach_chill,15.0,15.5,57362
+class 3,approach_chill,15.5,16.0,56112
+class 3,approach_chill,16.0,16.5,20947
+class 3,approach_chill,16.5,17.0,19637
+class 3,approach_chill,17.0,17.5,8996
+class 3,approach_chill,17.5,18.0,8846
+class 3,approach_chill,18.0,18.5,3141
+class 3,approach_chill,18.5,19.0,3160
+class 3,approach_chill,19.0,19.5,708
+class 3,approach_chill,19.5,20.0,623
+class 3,approach_chill,20.0,20.5,0
+class 3,approach_chill,20.5,21.0,0
+class 3,approach_chill,21.0,21.5,0
+class 3,approach_chill,21.5,22.0,0
+class 3,approach_chill,22.0,22.5,0
+class 3,approach_chill,22.5,23.0,0
+class 3,approach_chill,23.0,23.5,0
+class 3,approach_chill,23.5,24.0,0
+class 3,approach_chill,24.0,24.5,0
+class 3,approach_chill,24.5,25.0,0
+class 3,approach_chill,25.0,25.5,0
+class 3,approach_chill,25.5,26.0,0
+class 3,approach_chill,26.0,26.5,0
+class 3,approach_chill,26.5,27.0,0
+class 3,approach_chill,27.0,27.5,0
+class 3,approach_chill,27.5,28.0,0
+class 3,approach_chill,28.0,28.5,0
+class 3,approach_chill,28.5,29.0,0
+class 3,approach_chill,29.0,29.5,0
+class 3,approach_chill,29.5,30.0,0
+class 3,reset_K,-0.5,0.5,5052331
+class 3,reset_K,0.5,1.5,15884
+class 3,reset_K,1.5,2.5,2460
+class 3,reset_K,2.5,3.5,365
+class 3,reset_K,3.5,4.5,100
+class 3,reset_K,4.5,5.5,32
+class 3,reset_K,5.5,6.5,15
+class 3,reset_K,6.5,7.5,7
+class 3,reset_K,7.5,8.5,18
+class 3,reset_K,8.5,9.5,13
+class 3,reset_K,9.5,10.5,2
+class 3,reset_K,10.5,11.5,0
+class 3,reset_K,11.5,12.5,0
+class 3,reset_K,12.5,13.5,1
+class 3,reset_K,13.5,14.5,1
+class 3,margin_dry,0.0,0.5,0
+class 3,margin_dry,0.5,1.0,0
+class 3,margin_dry,1.0,1.5,0
+class 3,margin_dry,1.5,2.0,0
+class 3,margin_dry,2.0,2.5,0
+class 3,margin_dry,2.5,3.0,0
+class 3,margin_dry,3.0,3.5,0
+class 3,margin_dry,3.5,4.0,0
+class 3,margin_dry,4.0,4.5,0
+class 3,margin_dry,4.5,5.0,0
+class 3,margin_dry,5.0,5.5,159491
+class 3,margin_dry,5.5,6.0,113034
+class 3,margin_dry,6.0,6.5,145382
+class 3,margin_dry,6.5,7.0,98147
+class 3,margin_dry,7.0,7.5,126409
+class 3,margin_dry,7.5,8.0,48703
+class 3,margin_dry,8.0,8.5,116220
+class 3,margin_dry,8.5,9.0,75460
+class 3,margin_dry,9.0,9.5,92821
+class 3,margin_dry,9.5,10.0,66085
+class 3,margin_dry,10.0,10.5,78174
+class 3,margin_dry,10.5,11.0,54463
+class 3,margin_dry,11.0,11.5,64643
+class 3,margin_dry,11.5,12.0,44789
+class 3,margin_dry,12.0,12.5,51831
+class 3,margin_dry,12.5,13.0,14195
+class 3,margin_dry,13.0,13.5,43412
+class 3,margin_dry,13.5,14.0,31103
+class 3,margin_dry,14.0,14.5,33394
+class 3,margin_dry,14.5,15.0,25022
+class 3,margin_dry,15.0,15.5,28351
+class 3,margin_dry,15.5,16.0,20470
+class 3,margin_dry,16.0,16.5,21378
+class 3,margin_dry,16.5,17.0,16099
+class 3,margin_dry,17.0,17.5,16929
+class 3,margin_dry,17.5,18.0,2264
+class 3,margin_dry,18.0,18.5,15367
+class 3,margin_dry,18.5,19.0,10837
+class 3,margin_dry,19.0,19.5,11083
+class 3,margin_dry,19.5,20.0,7768
+class 3,margin_dry,20.0,20.5,7419
+class 3,margin_dry,20.5,21.0,5370
+class 3,margin_dry,21.0,21.5,4900
+class 3,margin_dry,21.5,22.0,3459
+class 3,margin_dry,22.0,22.5,3314
+class 3,margin_dry,22.5,23.0,197
+class 3,margin_dry,23.0,23.5,2638
+class 3,margin_dry,23.5,24.0,1969
+class 3,margin_dry,24.0,24.5,1836
+class 3,margin_dry,24.5,25.0,1408
+class 3,margin_dry,25.0,25.5,1171
+class 3,margin_dry,25.5,26.0,749
+class 3,margin_dry,26.0,26.5,793
+class 3,margin_dry,26.5,27.0,558
+class 3,margin_dry,27.0,27.5,493
+class 3,margin_dry,27.5,28.0,13
+class 3,margin_dry,28.0,28.5,436
+class 3,margin_dry,28.5,29.0,370
+class 3,margin_dry,29.0,29.5,314
+class 3,margin_dry,29.5,30.0,706
+class 4,approach_evap,0.0,0.5,0
+class 4,approach_evap,0.5,1.0,0
+class 4,approach_evap,1.0,1.5,0
+class 4,approach_evap,1.5,2.0,0
+class 4,approach_evap,2.0,2.5,0
+class 4,approach_evap,2.5,3.0,0
+class 4,approach_evap,3.0,3.5,155749
+class 4,approach_evap,3.5,4.0,135782
+class 4,approach_evap,4.0,4.5,116189
+class 4,approach_evap,4.5,5.0,97973
+class 4,approach_evap,5.0,5.5,77654
+class 4,approach_evap,5.5,6.0,60557
+class 4,approach_evap,6.0,6.5,44905
+class 4,approach_evap,6.5,7.0,31461
+class 4,approach_evap,7.0,7.5,21325
+class 4,approach_evap,7.5,8.0,14626
+class 4,approach_evap,8.0,8.5,9983
+class 4,approach_evap,8.5,9.0,6914
+class 4,approach_evap,9.0,9.5,4343
+class 4,approach_evap,9.5,10.0,2839
+class 4,approach_evap,10.0,10.5,1750
+class 4,approach_evap,10.5,11.0,1079
+class 4,approach_evap,11.0,11.5,581
+class 4,approach_evap,11.5,12.0,267
+class 4,approach_evap,12.0,12.5,129
+class 4,approach_evap,12.5,13.0,36
+class 4,approach_evap,13.0,13.5,7
+class 4,approach_evap,13.5,14.0,2
+class 4,approach_evap,14.0,14.5,0
+class 4,approach_evap,14.5,15.0,1
+class 4,approach_evap,15.0,15.5,0
+class 4,approach_evap,15.5,16.0,0
+class 4,approach_evap,16.0,16.5,0
+class 4,approach_evap,16.5,17.0,0
+class 4,approach_evap,17.0,17.5,0
+class 4,approach_evap,17.5,18.0,0
+class 4,approach_evap,18.0,18.5,0
+class 4,approach_evap,18.5,19.0,0
+class 4,approach_evap,19.0,19.5,0
+class 4,approach_evap,19.5,20.0,0
+class 4,approach_evap,20.0,20.5,0
+class 4,approach_evap,20.5,21.0,0
+class 4,approach_evap,21.0,21.5,0
+class 4,approach_evap,21.5,22.0,0
+class 4,approach_evap,22.0,22.5,0
+class 4,approach_evap,22.5,23.0,0
+class 4,approach_evap,23.0,23.5,0
+class 4,approach_evap,23.5,24.0,0
+class 4,approach_evap,24.0,24.5,0
+class 4,approach_evap,24.5,25.0,0
+class 4,approach_evap,25.0,25.5,0
+class 4,approach_evap,25.5,26.0,0
+class 4,approach_evap,26.0,26.5,0
+class 4,approach_evap,26.5,27.0,0
+class 4,approach_evap,27.0,27.5,0
+class 4,approach_evap,27.5,28.0,0
+class 4,approach_evap,28.0,28.5,0
+class 4,approach_evap,28.5,29.0,0
+class 4,approach_evap,29.0,29.5,0
+class 4,approach_evap,29.5,30.0,0
+class 4,approach_chill,0.0,0.5,0
+class 4,approach_chill,0.5,1.0,0
+class 4,approach_chill,1.0,1.5,0
+class 4,approach_chill,1.5,2.0,0
+class 4,approach_chill,2.0,2.5,0
+class 4,approach_chill,2.5,3.0,0
+class 4,approach_chill,3.0,3.5,46095
+class 4,approach_chill,3.5,4.0,135651
+class 4,approach_chill,4.0,4.5,262533
+class 4,approach_chill,4.5,5.0,458053
+class 4,approach_chill,5.0,5.5,646608
+class 4,approach_chill,5.5,6.0,793122
+class 4,approach_chill,6.0,6.5,878219
+class 4,approach_chill,6.5,7.0,870205
+class 4,approach_chill,7.0,7.5,847926
+class 4,approach_chill,7.5,8.0,744927
+class 4,approach_chill,8.0,8.5,647525
+class 4,approach_chill,8.5,9.0,535625
+class 4,approach_chill,9.0,9.5,465223
+class 4,approach_chill,9.5,10.0,390716
+class 4,approach_chill,10.0,10.5,357251
+class 4,approach_chill,10.5,11.0,309305
+class 4,approach_chill,11.0,11.5,241135
+class 4,approach_chill,11.5,12.0,211344
+class 4,approach_chill,12.0,12.5,162287
+class 4,approach_chill,12.5,13.0,144560
+class 4,approach_chill,13.0,13.5,106150
+class 4,approach_chill,13.5,14.0,97515
+class 4,approach_chill,14.0,14.5,68446
+class 4,approach_chill,14.5,15.0,62309
+class 4,approach_chill,15.0,15.5,37032
+class 4,approach_chill,15.5,16.0,33648
+class 4,approach_chill,16.0,16.5,22726
+class 4,approach_chill,16.5,17.0,21018
+class 4,approach_chill,17.0,17.5,12991
+class 4,approach_chill,17.5,18.0,12251
+class 4,approach_chill,18.0,18.5,6333
+class 4,approach_chill,18.5,19.0,6094
+class 4,approach_chill,19.0,19.5,3720
+class 4,approach_chill,19.5,20.0,3099
+class 4,approach_chill,20.0,20.5,510
+class 4,approach_chill,20.5,21.0,481
+class 4,approach_chill,21.0,21.5,424
+class 4,approach_chill,21.5,22.0,435
+class 4,approach_chill,22.0,22.5,0
+class 4,approach_chill,22.5,23.0,0
+class 4,approach_chill,23.0,23.5,0
+class 4,approach_chill,23.5,24.0,0
+class 4,approach_chill,24.0,24.5,0
+class 4,approach_chill,24.5,25.0,0
+class 4,approach_chill,25.0,25.5,0
+class 4,approach_chill,25.5,26.0,0
+class 4,approach_chill,26.0,26.5,0
+class 4,approach_chill,26.5,27.0,0
+class 4,approach_chill,27.0,27.5,0
+class 4,approach_chill,27.5,28.0,0
+class 4,approach_chill,28.0,28.5,0
+class 4,approach_chill,28.5,29.0,0
+class 4,approach_chill,29.0,29.5,0
+class 4,approach_chill,29.5,30.0,0
+class 4,reset_K,-0.5,0.5,9626285
+class 4,reset_K,0.5,1.5,15647
+class 4,reset_K,1.5,2.5,1211
+class 4,reset_K,2.5,3.5,213
+class 4,reset_K,3.5,4.5,57
+class 4,reset_K,4.5,5.5,30
+class 4,reset_K,5.5,6.5,21
+class 4,reset_K,6.5,7.5,7
+class 4,reset_K,7.5,8.5,5
+class 4,reset_K,8.5,9.5,4
+class 4,reset_K,9.5,10.5,5
+class 4,reset_K,10.5,11.5,5
+class 4,reset_K,11.5,12.5,2
+class 4,reset_K,12.5,13.5,0
+class 4,reset_K,13.5,14.5,0
+class 4,margin_dry,0.0,0.5,0
+class 4,margin_dry,0.5,1.0,0
+class 4,margin_dry,1.0,1.5,0
+class 4,margin_dry,1.5,2.0,0
+class 4,margin_dry,2.0,2.5,0
+class 4,margin_dry,2.5,3.0,0
+class 4,margin_dry,3.0,3.5,0
+class 4,margin_dry,3.5,4.0,0
+class 4,margin_dry,4.0,4.5,0
+class 4,margin_dry,4.5,5.0,0
+class 4,margin_dry,5.0,5.5,24105
+class 4,margin_dry,5.5,6.0,16050
+class 4,margin_dry,6.0,6.5,15801
+class 4,margin_dry,6.5,7.0,10520
+class 4,margin_dry,7.0,7.5,10246
+class 4,margin_dry,7.5,8.0,6794
+class 4,margin_dry,8.0,8.5,6568
+class 4,margin_dry,8.5,9.0,4730
+class 4,margin_dry,9.0,9.5,4124
+class 4,margin_dry,9.5,10.0,2960
+class 4,margin_dry,10.0,10.5,2529
+class 4,margin_dry,10.5,11.0,1839
+class 4,margin_dry,11.0,11.5,1566
+class 4,margin_dry,11.5,12.0,1109
+class 4,margin_dry,12.0,12.5,882
+class 4,margin_dry,12.5,13.0,613
+class 4,margin_dry,13.0,13.5,558
+class 4,margin_dry,13.5,14.0,411
+class 4,margin_dry,14.0,14.5,292
+class 4,margin_dry,14.5,15.0,205
+class 4,margin_dry,15.0,15.5,158
+class 4,margin_dry,15.5,16.0,110
+class 4,margin_dry,16.0,16.5,83
+class 4,margin_dry,16.5,17.0,43
+class 4,margin_dry,17.0,17.5,30
+class 4,margin_dry,17.5,18.0,21
+class 4,margin_dry,18.0,18.5,326
+class 4,margin_dry,18.5,19.0,8
+class 4,margin_dry,19.0,19.5,3
+class 4,margin_dry,19.5,20.0,1
+class 4,margin_dry,20.0,20.5,1
+class 4,margin_dry,20.5,21.0,0
+class 4,margin_dry,21.0,21.5,1
+class 4,margin_dry,21.5,22.0,0
+class 4,margin_dry,22.0,22.5,0
+class 4,margin_dry,22.5,23.0,1
+class 4,margin_dry,23.0,23.5,0
+class 4,margin_dry,23.5,24.0,1
+class 4,margin_dry,24.0,24.5,0
+class 4,margin_dry,24.5,25.0,0
+class 4,margin_dry,25.0,25.5,0
+class 4,margin_dry,25.5,26.0,0
+class 4,margin_dry,26.0,26.5,0
+class 4,margin_dry,26.5,27.0,0
+class 4,margin_dry,27.0,27.5,0
+class 4,margin_dry,27.5,28.0,0
+class 4,margin_dry,28.0,28.5,0
+class 4,margin_dry,28.5,29.0,0
+class 4,margin_dry,29.0,29.5,0
+class 4,margin_dry,29.5,30.0,0

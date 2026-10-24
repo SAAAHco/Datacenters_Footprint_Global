@@ -1,0 +1,44 @@
+Koppen benchmark eta2: {'PUE': 0.8301393818851668, 'WUE': 0.860469193761337}
+2055 stations
+climate normals done (10s)
+ k  silhouette  eta2_PUE  eta2_WUE
+ 2       0.555     0.663     0.505
+ 3       0.379     0.808     0.794
+ 4       0.356     0.898     0.875
+ 5       0.388     0.913     0.885
+ 6       0.390     0.916     0.909
+ 7       0.392     0.918     0.928
+ 8       0.384     0.936     0.928
+ 9       0.361     0.951     0.952
+10       0.382     0.962     0.952
+11       0.365     0.962     0.958
+12       0.365     0.962     0.960
+
+chosen k = 4 (smallest k matching the 26 class Koppen eta2)
+            n    PUE  PUE_sd    WUE  WUE_sd  occ_free  occ_evap  occ_chill  WUE_amp  T_mean  Td_mean  T4base_max  lat_absmean
+dc_class                                                                                                                     
+1         639  1.022   0.008  0.291   0.129     0.754     0.172      0.074    0.872   4.707   -0.063        27.0       54.228
+2         755  1.051   0.017  0.660   0.172     0.465     0.258      0.277    1.155  13.565    5.246        35.0       39.231
+3         275  1.095   0.018  1.002   0.094     0.191     0.230      0.579    0.800  20.274   12.804        35.0       30.655
+4         386  1.144   0.017  1.258   0.037     0.010     0.072      0.917    0.102  25.656   18.824        37.0       14.357
+
+adjusted Rand index DC classes vs Koppen (26): 0.163
+adjusted Rand index DC classes vs Koppen groups (A..E): 0.205
+nearest centroid rule on (annual mean T, annual mean Td): accuracy 75.6%
+          T_mean  Td_mean
+dc_class                 
+1           4.71    -0.06
+2          13.57     5.25
+3          20.27    12.80
+4          25.66    18.82
+
+56 g maps (31s)
+            n  PUE_mae_pct  WUE_mae_pct  WUE_mae_abs
+dc_class                                            
+1         639        0.695       27.213        0.091
+2         755        1.083       18.431        0.121
+3         275        1.018        7.049        0.067
+4         386        1.044        1.838        0.023
+
+DC classes overall LOO median |dPUE| 0.91%  |dWUE| 0.077 L/kWh
+[done] 37s
