@@ -28,7 +28,7 @@ plt.rcParams.update({
 MM = 1 / 25.4
 W = 180 * MM
 CLS = {1: "#0072B2", 2: "#56B4E9", 3: "#009E73", 4: "#E69F00", 5: "#D55E00"}
-CLS_NAME = {1: "Free-cooling cold", 2: "Mixed temperate", 3: "Chiller subtropical",
+CLS_NAME = {1: "Free-cooling cold", 2: "Free-cooling temperate", 3: "Mixed subtropical",
             4: "Chiller tropical", 5: "Class 5"}
 MODES = ["Dry free\ncooling", "Evaporative", "Chiller", "Chiller,\nset point reset"]
 MODE_COLS = ["#88CCEE", "#44AA99", "#CC6677", "#882255"]
@@ -127,7 +127,8 @@ fig.savefig(OUT / "Fig1.eps"); fig.savefig(OUT / "EPS" / "Fig1.eps"); plt.close(
 
 # ================================================================ Figure 2
 ksel = pd.read_csv(RW / "dc_k_selection.csv")
-loo_d = pd.read_csv(RW / "dc_loo.csv")
+# leak-free leave-one-out: class membership of the held-out station from the spatially blocked tree
+loo_d = pd.read_csv(RW / "dc_loo_blocked.csv") if (RW / "dc_loo_blocked.csv").exists() else pd.read_csv(RW / "dc_loo.csv")
 loo_k = pd.read_csv(RW / "koppen_loo.csv")
 
 fig = plt.figure(figsize=(W, 150 * MM))
@@ -137,8 +138,8 @@ ax_c1 = fig.add_axes([0.07, 0.07, 0.19, 0.40])
 ax_c2 = fig.add_axes([0.315, 0.07, 0.19, 0.40])
 ax_d = fig.add_axes([0.60, 0.07, 0.38, 0.40])
 
-ax_a.plot(ksel["k"], ksel["eta2_PUE"], "o-", color="#E69F00", ms=3, label="PUE, DC classes")
-ax_a.plot(ksel["k"], ksel["eta2_WUE"], "s-", color="#009E73", ms=3, label="WUE, DC classes")
+ax_a.plot(ksel["k"], ksel["eta2_PUE"], "o-", color="#E69F00", ms=3, label="PUE, cooling classes")
+ax_a.plot(ksel["k"], ksel["eta2_WUE"], "s-", color="#009E73", ms=3, label="WUE, cooling classes")
 kcorr = pd.read_csv(RW / "koppen_correspondence.csv")
 kcorr = kcorr[kcorr["metric"].isin(["PUE", "WUE"])].set_index("metric").astype(float)
 ax_a.axhline(kcorr.loc["PUE", "eta2_koppen"], color="#E69F00", ls="--", lw=0.8)
@@ -167,36 +168,36 @@ for c, g in ok.groupby("dc_class"):
     ax_c1.scatter(g["PUE_actual"], g["PUE_loo"] + DODGE.get(int(c), 0.0), s=1.5,
                   color=CLS[int(c)], rasterized=True)
     ax_c2.scatter(g["WUE_actual"], g["WUE_loo"], s=1.5, color=CLS[int(c)], rasterized=True)
-lims1 = [1.0, 1.18]
+lims1 = [1.0, float(max(ok["PUE_actual"].max(), ok["PUE_loo"].max())) + 0.006]
 ax_c1.plot(lims1, lims1, "k-", lw=0.6)
 ax_c1.set_xlim(lims1); ax_c1.set_ylim(lims1)
 ax_c1.set_xlabel("Station PUE (kWh kWh$^{-1}$)"); ax_c1.set_ylabel("Predicted from class climate")
 # absolute errors (kWh kWh-1), same unit convention as the WUE panel
 p_d = (loo_d["PUE_loo"] - loo_d["PUE_actual"]).abs().median()
 p_k = (loo_k["PUE_loo"] - loo_k["PUE_actual"]).abs().median()
-ax_c1.text(0.05, 0.92, f"median error {p_d:.3f} kWh kWh$^{{-1}}$\n(Köppen-Geiger, {loo_k["koppen"].nunique()} cl.: {p_k:.3f})",
-           transform=ax_c1.transAxes, fontsize=6.5)
-lims2 = [0.0, 1.45]
+ax_c1.text(0.04, 0.975, f"median error {p_d:.3f} kWh kWh$^{{-1}}$\n(Köppen-Geiger, {loo_k["koppen"].nunique()} cl.: {p_k:.3f})",
+           transform=ax_c1.transAxes, fontsize=6.0, va="top")
+lims2 = [0.0, float(max(ok["WUE_actual"].max(), ok["WUE_loo"].max())) + 0.05]
 ax_c2.plot(lims2, lims2, "k-", lw=0.6)
 ax_c2.set_xlim(lims2); ax_c2.set_ylim(lims2)
 ax_c2.set_xlabel("Station WUE (L kWh$^{-1}$)")
 w_d = (loo_d["WUE_loo"] - loo_d["WUE_actual"]).abs().median()
 w_k = (loo_k["WUE_loo"] - loo_k["WUE_actual"]).abs().median()
-ax_c2.text(0.05, 0.92, f"median error {w_d:.3f} L kWh$^{{-1}}$\n(Köppen-Geiger: {w_k:.3f})",
-           transform=ax_c2.transAxes, fontsize=6.5)
+ax_c2.text(0.04, 0.975, f"median error {w_d:.3f} L kWh$^{{-1}}$\n(Köppen-Geiger: {w_k:.3f})",
+           transform=ax_c2.transAxes, fontsize=6.0, va="top")
 panel_label(ax_c1, "c")
 
 mon = pd.read_csv(RW / "station_monthly.csv")
 tr = mon.groupby("STATION")["T"].agg(lambda s: s.max() - s.min()).rename("T_range")
 dd = resc.dropna(subset=["dc_class"]).merge(tr, on="STATION")
 for c, g in dd.groupby("dc_class"):
-    ax_d.scatter(g["T_mean"], g["Td_mean"], s=2.5, color=CLS[int(c)], rasterized=True)
+    ax_d.scatter(g["T_mean"], g["T_range"], s=2.5, color=CLS[int(c)], rasterized=True)
 for c, g in dd.groupby("dc_class"):
-    ax_d.text(g["T_mean"].mean(), g["Td_mean"].mean(), str(int(c)), fontsize=9,
+    ax_d.text(g["T_mean"].mean(), g["T_range"].mean(), str(int(c)), fontsize=9,
               fontweight="bold", ha="center", va="center",
               bbox=dict(boxstyle="circle,pad=0.15", fc="white", ec=CLS[int(c)], lw=1.0))
 ax_d.set_xlabel("Annual mean temperature (°C)")
-ax_d.set_ylabel("Annual mean dew point (°C)")
+ax_d.set_ylabel("Seasonal range of monthly mean temperature (°C)")
 panel_label(ax_d, "d")
 fig.savefig(OUT / "Fig2.png"); fig.savefig(OUT / "Fig2.pdf")
 fig.savefig(OUT / "Fig2.eps"); fig.savefig(OUT / "EPS" / "Fig2.eps"); plt.close(fig)
@@ -231,7 +232,8 @@ ax_b.hist(ann["r_et0"].dropna(), bins=36, color="#0072B2")
 ax_b.axvline(0, color="k", lw=0.7)
 ax_b.set_xlabel("Correlation of monthly facility water with ET$_0$")
 ax_b.set_ylabel("Stations")
-ax_bb = ax_b.inset_axes([0.12, 0.40, 0.42, 0.46])
+ax_bb = ax_b.inset_axes([0.12, 0.40, 0.42, 0.46], zorder=6)
+ax_bb.set_facecolor("white"); ax_bb.patch.set_alpha(1.0)
 med = pp[pp["dc_class"].isin(range(1, K + 1))].groupby("dc_class")["r_precip"].median()
 xpos = np.arange(len(med))
 ax_bb.bar(xpos, med.values, color=[CLS[int(c)] for c in med.index])
@@ -308,7 +310,7 @@ wsu = pd.read_csv(RW / "warming_summary.csv")
 fig = plt.figure(figsize=(W, 135 * MM))
 ax_a = fig.add_axes([0.07, 0.58, 0.40, 0.37])
 ax_b = fig.add_axes([0.58, 0.58, 0.40, 0.37])
-ax_c = fig.add_axes([0.07, 0.085, 0.40, 0.36])
+ax_c = fig.add_axes([0.095, 0.085, 0.375, 0.36])
 ax_d = fig.add_axes([0.58, 0.085, 0.40, 0.36])
 
 base = wsu[wsu["scenario"] == "base"].iloc[0]
@@ -337,7 +339,7 @@ if np.isfinite(_ls["lambda_star"]):
                  edgecolor="#0072B2", zorder=6)
     ax_c.annotate(f"water price $\\lambda^*$ = {_ls['lambda_star']:.4f} kWh L$^{{-1}}$",
                   xy=(float(_ls["WUE_at"]), float(_ls["PUE_at"])),
-                  xytext=(float(_ls["WUE_at"]) + 0.03, float(_ls["PUE_at"]) + 0.0032),
+                  xytext=(0.22, 0.86), textcoords="axes fraction",
                   fontsize=6.5, arrowprops=dict(arrowstyle="-", lw=0.6))
 ax_c.set_xlabel("WUE (L kWh$^{-1}$)"); ax_c.set_ylabel("PUE (kWh kWh$^{-1}$)")
 ax_c.legend(frameon=False, loc="center right")

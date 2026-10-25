@@ -1,0 +1,21 @@
+[classify] running ['assign_koppen'] (0s)
+  assign_koppen: exit 0  | Dwd      1 / SPM00008222 -> BSk / USW00023044 -> BWk
+[classify] running ['world_koppen_analysis'] (2s)
+  world_koppen_analysis: exit 0  |  / self convolution check (smoothing bias): PUE median 0.06%  WUE median 0.91% / [done] 35s
+[classify] running ['dc_classification'] (38s)
+  dc_classification: exit 0  |  / DC classes overall LOO median |dPUE| 0.99%  |dWUE| 0.086 L/kWh / [done] 64s
+[analyses] running ['world_analysis', 'closure_check', 'gsa_world', 'design_optimization', 'warming_scenarios', 'aqueduct_overlay', 'precip_phase', 'classification_hardening', 'representativeness', 'vcap_rederive', 'water_scenarios', 'load_profiles', 'approach_stats'] (102s)
+  world_analysis: exit 0  | [annual] row group 2075/2081, 126s /  / [done] 126s  countries 139  annual rows 2081  r_et0 median 0.91
+  closure_check: exit 0  | 2.00        1.0102       1.0162        1.1765       1.2802         1.1511        1.1521         1.4599        1.3867 / 3.00        1.0102       1.0116        1.1765       1.1713         1.1511        1.1515         1.4599        1.3941 / [done] 130s
+  gsa_world: exit 0  | class 3    WUE         1.0060 1.0044 0.0480      4.7701          -8.6819           8.2505           0.9894            0.9035            1.0710 / class 4    WUE         1.4646 1.4656 0.0259      1.7686          -2.9329           3.9200           1.4446            1.4022            1.5012 / [done] 623s
+  design_optimization: exit 0  |   class 3: PUE 1.0138 (base 1.0761)  WUE 0.3339 (base 0.9894)  dry share 75%  chiller share 0.0% /   class 4: PUE 1.0128 (base 1.1446)  WUE 0.7472 (base 1.4446)  dry share 42%  chiller share 0.0% / [done] 250s
+  warming_scenarios: exit 0  | 4.0           0    0    0  448 /   constTd +3C: moved 14.1%  (toward hotter classes 14.1%) / [done] 60s
+  aqueduct_overlay: exit 1  |     handle = open( /              ^^^^^ / FileNotFoundError: [Errno 2] No such file or directory: 'E:\\Datacenter_Global\\results_world\\annual_benchmark.csv'
+  precip_phase: exit 1  |     handle = open( /              ^^^^^ / FileNotFoundError: [Errno 2] No such file or directory: 'E:\\Datacenter_Global\\results_world\\annual_benchmark.csv'
+  classification_hardening: exit 0  | |   |   |   |--- class: 4 /  / [done] 60s
+  representativeness: exit 0  | WUE: area weighted world mean 0.9171  (+16.53% vs panel) / area on group fallback (classes with under 5 stations): 5.75% / [done] 1s
+  vcap_rederive: exit 0  | re-derived bound: 2 x max healthy = 0.193  (current VCAP 0.15) / climate mass with healthy flow in (0.150, 0.193]: 0.0000% of panel hours (~0 records would change escalation status) / [done] 25s
+  water_scenarios: exit 0  |  / note: the source term EXCEEDS on site evaporation wherever the grid is hydro or / thermal heavy; the base case remains on site consumptive evaporation only.
+  load_profiles: exit 0  |  / night vs inference WUE: median -9.47%  p5 -24.30%  p95 -0.60% / [done] 14s
+  approach_stats: exit 0  | class 3 19464773    28.23     27.10      44.67                0.19                  0.42          1.21         0.0           5.75          3.25            9.25           4.75           14.25            9.75     13.44    38.22                     10.48                      8.02 / class 4 10609445     1.11      7.45      91.44                0.16                  0.18          1.13         0.0           4.25          3.25            7.25           4.75           13.25            6.75     21.06    40.08                      6.35                      1.03 / [done] 15s
+[analyses] FAILED: ['aqueduct_overlay', 'precip_phase']; chain stopped

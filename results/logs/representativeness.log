@@ -28,9 +28,9 @@ lat_k
 (30, 50]        48.4     37.0
 (50, 70]        19.9     13.4
 
-PUE: panel 1.0661  composition corrected 1.0713  (+0.49%)
+PUE: panel 1.0673  composition corrected 1.0724  (+0.48%)
 
-WUE: panel 0.7079  composition corrected 0.7582  (+7.10%)
+WUE: panel 0.7870  composition corrected 0.8451  (+7.39%)
 
 land area 70S to 70N: 141.2 million km2 (1s); top classes:
        area_km2  area_share_pct
@@ -44,7 +44,7 @@ BSk   7689569.0            5.45
 Cfa   7528304.0            5.33
 ET    6870653.0            4.87
 Am    5502313.0            3.90
-PUE: area weighted world mean 1.0782  (+1.13% vs panel)
-WUE: area weighted world mean 0.8178  (+15.53% vs panel)
+PUE: area weighted world mean 1.0792  (+1.12% vs panel)
+WUE: area weighted world mean 0.9171  (+16.53% vs panel)
 area on group fallback (classes with under 5 stations): 5.75%
 [done] 1s

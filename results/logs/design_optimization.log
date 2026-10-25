@@ -1,61 +1,61 @@
-E:\Datacenter_Global\dcfootprint\core\tower.py:57: RuntimeWarning: divide by zero encountered in divide
+E:\Datacenter_Global\dcfootprint\core\tower.py:83: RuntimeWarning: divide by zero encountered in divide
   mA = mL1 * (hL1 - hL4) / ((hA5 + w5 * hV5) - (hA2 + w2 * hV2) - (w5 - w2) * hL3)
-E:\Datacenter_Global\dcfootprint\core\tower.py:64: RuntimeWarning: invalid value encountered in multiply
+E:\Datacenter_Global\dcfootprint\core\tower.py:90: RuntimeWarning: invalid value encountered in multiply
   mL3 = (w5 - w2) * mA
-E:\Datacenter_Global\dcfootprint\core\tower.py:70: RuntimeWarning: invalid value encountered in subtract
+E:\Datacenter_Global\dcfootprint\core\tower.py:96: RuntimeWarning: invalid value encountered in subtract
   varE = sL4 * mL4 + (sA5 * mA + sV5 * mV5) - sL1 * mL1 - (sA2 * mA + sV2 * mV2) - sL3 * mL3
-E:\Datacenter_Global\dcfootprint\core\tower.py:57: RuntimeWarning: divide by zero encountered in divide
+E:\Datacenter_Global\dcfootprint\core\tower.py:83: RuntimeWarning: divide by zero encountered in divide
   mA = mL1 * (hL1 - hL4) / ((hA5 + w5 * hV5) - (hA2 + w2 * hV2) - (w5 - w2) * hL3)
-E:\Datacenter_Global\dcfootprint\core\tower.py:64: RuntimeWarning: invalid value encountered in multiply
+E:\Datacenter_Global\dcfootprint\core\tower.py:90: RuntimeWarning: invalid value encountered in multiply
   mL3 = (w5 - w2) * mA
-E:\Datacenter_Global\dcfootprint\core\tower.py:70: RuntimeWarning: invalid value encountered in subtract
+E:\Datacenter_Global\dcfootprint\core\tower.py:96: RuntimeWarning: invalid value encountered in subtract
   varE = sL4 * mL4 + (sA5 * mA + sV5 * mV5) - sL1 * mL1 - (sA2 * mA + sV2 * mV2) - sL3 * mL3
-histograms (14s)
-56 map groups built (150s)
-policies evaluated (166s)
+histograms (15s)
+56 map groups built (84s)
+policies evaluated (113s)
 
 policy comparison (means over stations):
   scope  PUE_record  WUE_record  PUE_base  WUE_base  PUE_pueopt  WUE_pueopt  occ_dry_pueopt  PUE_wueopt  WUE_wueopt
-  world      1.0661      0.7079    1.0666    0.7141      1.0641      1.1536             0.0      1.0706      0.7131
-class 1      1.0221      0.2911    1.0224    0.2968      1.0184      1.0653             0.0      1.0244      0.2964
-class 2      1.0507      0.6605    1.0512    0.6678      1.0484      1.1476             0.0      1.0580      0.6660
-class 3      1.0954      1.0025    1.0961    1.0117      1.0947      1.2049             0.0      1.1003      1.0107
-class 4      1.1442      1.2578    1.1448    1.2606      1.1447      1.2705             0.0      1.1469      1.2600
+  world      1.0673      0.7870    1.0678    0.7938      1.0649      1.2012             0.0      1.0686      0.7933
+class 1      1.0162      0.1373    1.0163    0.1423      1.0111      0.9532             0.0      1.0163      0.1423
+class 2      1.0360      0.4806    1.0363    0.4868      1.0321      1.0845             0.0      1.0368      0.4865
+class 3      1.0761      0.9894    1.0768    0.9999      1.0746      1.2745             0.0      1.0788      0.9988
+class 4      1.1446      1.4446    1.1452    1.4479      1.1451      1.4579             0.0      1.1455      1.4478
 
 world frontier (lambda sweep, means):
                  PUE     WUE
 lam                         
-0.000000e+00  1.0641  1.1536
-1.000000e-03  1.0641  1.1536
-2.000000e-03  1.0641  1.1524
-5.000000e-03  1.0649  0.9364
-1.000000e-02  1.0662  0.7457
-2.000000e-02  1.0666  0.7141
-5.000000e-02  1.0666  0.7141
-1.000000e-01  1.0666  0.7141
-2.000000e-01  1.0666  0.7141
-5.000000e-01  1.0666  0.7141
-1.000000e+00  1.0666  0.7141
-1.000000e+09  1.0706  0.7131
+0.000000e+00  1.0649  1.2012
+1.000000e-03  1.0649  1.2012
+2.000000e-03  1.0649  1.2012
+5.000000e-03  1.0651  1.1376
+1.000000e-02  1.0674  0.8289
+2.000000e-02  1.0678  0.7938
+5.000000e-02  1.0678  0.7938
+1.000000e-01  1.0678  0.7938
+2.000000e-01  1.0678  0.7938
+5.000000e-01  1.0678  0.7938
+1.000000e+00  1.0679  0.7936
+1.000000e+09  1.0686  0.7933
 
 water price at which the frontier returns to the production water use:
   scope  lambda_star  PUE_at  WUE_at  WUE_target  PUE_energy_only  WUE_energy_only  energy_gain_recovered_pct
-  world      0.01732 1.06656 0.71410     0.71410          1.06410          1.15355                      100.0
-class 1      0.01732 1.02236 0.29681     0.29681          1.01843          1.06534                      100.0
-class 2      0.01499 1.05123 0.66784     0.66784          1.04837          1.14765                      100.0
-class 3      0.01311 1.09613 1.01171     1.01171          1.09471          1.20491                      100.0
-class 4      0.01311 1.14477 1.26057     1.26057          1.14468          1.27049                      100.0
+  world      0.01658 1.06775 0.79378     0.79378          1.06486          1.20119                      100.0
+class 1      0.01658 1.01625 0.14225     0.14225          1.01109          0.95320                      100.0
+class 2      0.01344 1.03628 0.48677     0.48677          1.03212          1.08446                      100.0
+class 3      0.01443 1.07681 0.99987     0.99987          1.07457          1.27453                      100.0
+class 4      0.01256 1.14517 1.44793     1.44793          1.14507          1.45792                      100.0
 
 chiller set point sweep (PUE at T4base = 26 / 30 / 34 per class):
-  class 1: PUE 1.0227 / 1.0236 / 1.0245   WUE 0.3001 / 0.3004 / 0.3004
-  class 2: PUE 1.0508 / 1.0536 / 1.0571   WUE 0.6596 / 0.6611 / 0.6611
-  class 3: PUE 1.0924 / 1.0976 / 1.1048   WUE 1.0050 / 1.0086 / 1.0086
-  class 4: PUE 1.1383 / 1.1454 / 1.1565   WUE 1.2515 / 1.2575 / 1.2575
+  class 1: PUE 1.0161 / 1.0163 / 1.0165   WUE 0.1450 / 0.1456 / 0.1462
+  class 2: PUE 1.0360 / 1.0377 / 1.0397   WUE 0.4817 / 0.4872 / 0.4927
+  class 3: PUE 1.0751 / 1.0793 / 1.0847   WUE 0.9852 / 0.9981 / 1.0130
+  class 4: PUE 1.1388 / 1.1458 / 1.1566   WUE 1.4229 / 1.4457 / 1.4771
 
 direct liquid cooling archetype (loop 39/30, dry below 25 C, sprayed up to Twb 27 C):
-  world: PUE 1.0117 (base 1.0661)  WUE 0.2794 (base 0.7079)  dry share 78%  chiller share 0.0%
-  class 1: PUE 1.0112 (base 1.0221)  WUE 0.0318 (base 0.2911)  dry share 98%  chiller share 0.0%
-  class 2: PUE 1.0118 (base 1.0507)  WUE 0.2011 (base 0.6605)  dry share 85%  chiller share 0.0%
-  class 3: PUE 1.0121 (base 1.0954)  WUE 0.3895 (base 1.0025)  dry share 70%  chiller share 0.0%
-  class 4: PUE 1.0117 (base 1.1442)  WUE 0.7438 (base 1.2578)  dry share 42%  chiller share 0.0%
-[done] 281s
+  world: PUE 1.0133 (base 1.0673)  WUE 0.2814 (base 0.7870)  dry share 78%  chiller share 0.0%
+  class 1: PUE 1.0121 (base 1.0162)  WUE 0.0046 (base 0.1373)  dry share 100%  chiller share 0.0%
+  class 2: PUE 1.0133 (base 1.0360)  WUE 0.0872 (base 0.4806)  dry share 93%  chiller share 0.0%
+  class 3: PUE 1.0138 (base 1.0761)  WUE 0.3339 (base 0.9894)  dry share 75%  chiller share 0.0%
+  class 4: PUE 1.0128 (base 1.1446)  WUE 0.7472 (base 1.4446)  dry share 42%  chiller share 0.0%
+[done] 250s

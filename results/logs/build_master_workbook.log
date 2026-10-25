@@ -63,4 +63,4 @@ verification checks: 11, review flags: 9
   sheet koppen_area_weights: (31, 3)
   sheet vcap: (1, 9)
 SKIPPED (missing): ['closure_check']
-[done] E:\Datacenter_Global\results_world\World_Results_Master.xlsx (8.9 MB) in 12s
+[done] E:\Datacenter_Global\results_world\World_Results_Master.xlsx (8.9 MB) in 13s

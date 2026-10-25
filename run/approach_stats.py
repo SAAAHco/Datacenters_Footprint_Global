@@ -44,7 +44,7 @@ for i in range(pf.num_row_groups):
         T = g["T"].to_numpy(float); tw = g["Twb"].to_numpy(float)
         mode = g["mode"].to_numpy(); reset = g["reset"].to_numpy(float); esc = g["esc"].to_numpy()
         T4 = np.where(mode <= 1, T_SUPPLY, t4b + reset)
-        for cc in (c, 0):
+        for cc in ({c, 0}):   # a set: the unclassified stations (c = 0) count once in the world row
             a = A(cc)
             a["hours"] += len(g)
             a["dry"] += int((mode == 0).sum()); a["evap"] += int((mode == 1).sum())

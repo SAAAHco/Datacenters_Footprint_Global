@@ -1,0 +1,17 @@
+histograms for 2081 stations (7s)
+30 (design, pressure) groups
+    scope  hours_chill  cap_chill_pct  cap_evap_pct  cap_dry_pct  depth_median_K
+    world   23915220.0           9.89         100.0        99.96            1.75
+design 26    5379162.0           5.69         100.0        99.96             NaN
+design 27    2268252.0           3.01         100.0        99.95             NaN
+design 28    2286246.0           6.14         100.0        99.99             NaN
+design 29    2936835.0          11.02         100.0        99.98             NaN
+design 30    4558746.0          13.44         100.0       100.00             NaN
+design 31    3446264.0          12.55         100.0       100.00             NaN
+design 32    2037620.0           9.51         100.0       100.00             NaN
+design 33     594253.0          24.64         100.0       100.00             NaN
+design 34     194961.0          34.13         100.0       100.00             NaN
+design 35     183568.0          34.28         100.0       100.00             NaN
+design 37      29313.0          37.56         100.0       100.00             NaN
+chiller plateau, 24 K vs 5.5 K split: {'pue24': 1.1546, 'pue55': 1.1655, 'wue24': 1.4715, 'wue55': 1.4508, 'split24': 24.0}
+done (15s)

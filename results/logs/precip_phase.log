@@ -2,31 +2,31 @@
 
 1032 stations analyzed
 r(monthly facility water, monthly precipitation): median +0.41
-  supply in phase (r > 0.3):   55%
+  supply in phase (r > 0.3):   56%
   neutral (-0.3 to 0.3):       27%
   supply anti phase (r < -0.3): 17%
 wet hour frequency version: median r -0.43, agreement in sign with totals 56%
 
 by Koppen group:
-  A (9): median r -0.02, in phase 22%, anti phase 22%
+  A (9): median r -0.04, in phase 22%, anti phase 22%
   B (115): median r +0.57, in phase 64%, anti phase 17%
   C (409): median r +0.06, in phase 38%, anti phase 25%
-  D (462): median r +0.60, in phase 69%, anti phase 11%
+  D (462): median r +0.61, in phase 69%, anti phase 11%
   E (37): median r +0.45, in phase 62%, anti phase 5%
 
 key classes:
-  Af (5): median r -0.08, in phase 20%, anti phase 40%
-  Csa (24): median r -0.50, in phase 4%, anti phase 71%
+  Af (5): median r -0.11, in phase 20%, anti phase 40%
+  Csa (24): median r -0.51, in phase 4%, anti phase 71%
   Csb (45): median r -0.75, in phase 2%, anti phase 87%
   Cfa (191): median r +0.38, in phase 59%, anti phase 3%
   BSh (9): median r +0.53, in phase 78%, anti phase 11%
-  BWh (7): median r -0.00, in phase 14%, anti phase 43%
+  BWh (7): median r -0.01, in phase 14%, anti phase 43%
 
 by DC class:
-  class 1 (479): median r +0.41, in phase 56%, anti phase 18%
-  class 2 (433): median r +0.45, in phase 58%, anti phase 18%
-  class 3 (104): median r +0.21, in phase 46%, anti phase 12%
-  class 4 (16): median r +0.02, in phase 38%, anti phase 19%
+  class 1 (155): median r +0.45, in phase 58%, anti phase 13%
+  class 2 (607): median r +0.47, in phase 57%, anti phase 19%
+  class 3 (252): median r +0.31, in phase 50%, anti phase 17%
+  class 4 (18): median r +0.08, in phase 44%, anti phase 17%
 
 stations with demand strongly in phase with ET0 (r_et0 > 0.5): 1024
   of these, supply also in phase: 56%, supply anti phase: 17%

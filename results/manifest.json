@@ -6,10 +6,11 @@
   "rows": 99167636
  },
  "model": {
-  "package_version": "0.2.0",
+  "package_version": "0.3.0",
   "properties": "v2-table6-partialp",
   "aux_term": "corrected dp*Vdot (250 Pa fan, 0.21 MPa pump)",
   "closure": "reversible entropy null, bisection 60 iters",
+  "physics": "v3: tower load Q_DC (1 + chill/COP) in the chiller mode; T5 bisected between min(T2, T4) and T1",
   "policy": {
    "name": "water preferring economizer sequence with approach temperatures",
    "a_wet_K": 3.0,

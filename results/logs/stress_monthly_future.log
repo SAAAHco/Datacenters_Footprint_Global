@@ -2,30 +2,30 @@ C:\Users\workt\anaconda3\Lib\site-packages\pyogrio\raw.py:200: RuntimeWarning: o
   return ogr_read(
 E:\Datacenter_Global\run\stress_monthly_future.py:78: RuntimeWarning: Mean of empty slice
   s_annual_mean=float(np.nanmean(s))))
-monthly layer joined (2s); nearest fallback 25
+monthly layer joined (1s); nearest fallback 25
 
 peak on peak (1154 stations with seasonal stress data):
   r(monthly water, monthly stress): median +0.42, share positive 74%, share > 0.3: 56%
   peak coincidence (max water month in basin's top 3 stress months): 52% of stations
-  stress amplification (water weighted minus mean score): median +0.082, p90 +0.737
+  stress amplification (water weighted minus mean score): median +0.087, p90 +0.776
   by DC class (median r, median amplification):
-    class 1: r +0.52  amp +0.245  coincidence 52%
-    class 2: r +0.59  amp +0.188  coincidence 54%
-    class 3: r +0.52  amp +0.073  coincidence 51%
-    class 4: r -0.05  amp -0.000  coincidence 49%
-  scarce basin stations only: r median +0.67, coincidence 54%
+    class 1: r +0.26  amp +0.202  coincidence 36%
+    class 2: r +0.53  amp +0.221  coincidence 51%
+    class 3: r +0.62  amp +0.118  coincidence 57%
+    class 4: r -0.07  amp -0.000  coincidence 46%
+  scarce basin stations only: r median +0.67, coincidence 55%
 
-future layer joined (5s)
+future layer joined (2s)
 future label values (bau50): {'Low (<10%)': 981, 'Extremely high (>80%)': 312, 'Medium-high (20-40%)': 249, 'Low-medium (10-20%)': 233, 'High (40-80%)': 197, 'Arid and low water use': 100}
 
 scarcity accounting, baseline vs projections (baseline: scarce 537 = 25.8%, red zone 181 = 8.7%, water share 27.8%):
 scenario  scarce_stations  scarce_pct  newly_scarce  exit_scarce  red_zone  red_zone_pct  water_share_pct
- bau2030              561        27.0            48           24        55           2.6             30.7
- bau2050              609        29.3            84           12        66           3.2             33.4
- opt2030              592        28.4            66           11        52           2.5             32.0
- opt2050              620        29.8            94           11        61           2.9             33.6
- pes2030              568        27.3            54           23        50           2.4             31.0
- pes2050              662        31.8           133            8        68           3.3             36.1
+ bau2030              561        27.0            48           24        57           2.7             30.5
+ bau2050              609        29.3            84           12        68           3.3             33.2
+ opt2030              592        28.4            66           11        54           2.6             31.7
+ opt2050              620        29.8            94           11        63           3.0             33.3
+ pes2030              568        27.3            54           23        52           2.5             30.7
+ pes2050              662        31.8           133            8        70           3.4             35.8
 
 category migration baseline to BAU 2050:
 bau 2050                Arid and low water use  Extremely high  High  Low  Low-medium  Medium-high  None
@@ -37,4 +37,4 @@ Low (<10%)                                   0               0     5  958       
 Low - Medium (10-20%)                        1               4     6    3         165           66     0
 Medium - High (20-40%)                       1               2    59    0           5          160     0
 No Data                                      0               0     6   16           2            4     9
-[done] 5s
+[done] 2s

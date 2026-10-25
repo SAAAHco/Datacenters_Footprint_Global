@@ -28,6 +28,7 @@ _cb_p = float(_lk["dPUE_self_pct"].abs().median()); _cb_w = float(_lk["dWUE_self
 _gc = pd.read_csv(RW / "gsa_world_ci.csv").set_index(["scope", "metric"])
 _ci = {m: (float(_gc.loc[("world", m), "production_ci_lo"]), float(_gc.loc[("world", m), "production_ci_hi"])) for m in ("PUE", "WUE")}
 _sob = 1024 * (pd.read_csv(RW / "gsa_world_sobol.csv")["param"].nunique() + 2)
+_K = int(pd.read_csv(RW / "dc_class_table.csv")["dc_class"].max())
 plt.rcParams.update({"font.family": "Arial", "font.size": 6.5, "axes.labelsize": 6.5,
                      "xtick.labelsize": 6, "ytick.labelsize": 6, "legend.fontsize": 6,
                      "axes.linewidth": 0.6, "savefig.dpi": 300})
@@ -87,8 +88,8 @@ ax.text(8.35, 3.55, "3  makeup water, $T_3$ = $T_2$", ha="center", va="bottom", 
 # balances
 ax.text(0.15, 2.5,
         "Mass:     $\\dot m_{L3}$ = ($w_5$ - $w_2$) $\\dot m_A$,   $w$ = 0.62186 $p_V$/($p$ - $p_V$)\n"
-        "Energy:  $\\dot m_A$ = $Q_{DC}$ / [($h_{A5}$ + $w_5 h_{V5}$) - ($h_{A2}$ + $w_2 h_{V2}$) - ($w_5$ - $w_2$) $h_{L3}$]\n"
-        "Closure: entropy production $\\sigma$($T_5$) = 0, bisection on $T_5$ between $T_2$ and 50 °C\n"
+        "Energy:  $\\dot m_A$ = $Q$ / [($h_{A5}$ + $w_5 h_{V5}$) - ($h_{A2}$ + $w_2 h_{V2}$) - ($w_5$ - $w_2$) $h_{L3}$],   $Q$ = $Q_{DC}$(1 + $\\chi$/COP)\n"
+        "Closure: entropy production $\\sigma$($T_5$) = 0, bisection on $T_5$ in [min($T_2$, $T_4$), $T_1$]; outlet capped at $T_1$\n"
         "PUE = 1 + [$\\Delta p_{fan} \\dot V_{A5}$ + $\\Delta p_{pump} \\dot V_{L}$ + chiller/COP($T_4$)] / $Q_{DC}$;   WUE = 3,600 $\\dot m_{L3}$ / $Q_{DC}$",
         ha="left", va="top", fontsize=5.3, linespacing=1.45,
         bbox=dict(boxstyle="round,pad=0.35", fc="white", ec=GREY, lw=0.5))
@@ -123,7 +124,7 @@ label(ax, "c", x=0.0, y=1.0)
 steps = [
     (12.45, "GHCNh hourly archive, 2022 to 2025: 24,072 stations"),
     (11.35, "All four years and the three sensors (T, dew point or RH,\nstation pressure): 8,017 stations"),
-    (10.05, "One station per equal-area cell (12,364 km$^2$), fewest missing\nrecords: 3,379 stations, 99.2 M records (Note 1)"),
+    (10.05, "One station per equal-area cell (12,364 km$^2$), fewest missing\nrecords: 3,379 stations, 99.2 M records (Section S1)"),
     (8.75, "Cleaning by physical rule: plausibility, one record per hour,\ndew point first, pressure trust ladder (25 hPa gate)"),
     (7.45, "Coverage screen ($\\geq$ 50% of hours, every month $\\geq$ 30%):\n2,081 stations, 139 countries, 65.2 M station hours"),
     (6.15, "Per-station design: $T_4$ = max(26, floor($p_{99.5}$($T_{wb}$) + 3) + 1) °C,\n$T_1$ = $T_4$ + 24 °C; station pressure"),
@@ -137,10 +138,10 @@ for y0, y1 in zip(ys[:-1], ys[1:]):
     h0 = 0.28 if "\n" not in steps[ys.index(y0)][1] else 0.46
     arrow(ax, 5.0, y0 - h0, 5.0, y1 + 0.46)
 # analyses row
-an = [(1.35, "Classification and\ntransfer: Ward k = 5,\nKDE convolution,\nleave-one-out\n(Notes 6, 7)"),
-      (3.8, "Benchmark facility\n100 MW: ET0 and\nrainfall calendars,\nAqueduct, warming\n(Notes 9 to 11)"),
-      (6.25, "Policies, archetypes,\nwater accounting,\nload profiles\n(Notes 12, 13)"),
-      (8.7, "Uncertainty:\nSobol 11,264,\nLHS 4,096\n(Note 3)")]
+an = [(1.35, f"Classification and\ntransfer: Ward k = {_K},\nKDE convolution,\nleave-one-out\n(Sections S6, S7)"),
+      (3.8, "Benchmark facility\n100 MW: ET0 and\nrainfall calendars,\nAqueduct, warming\n(Sections S9 to S11)"),
+      (6.25, "Policies, archetypes,\nwater accounting,\nload profiles\n(Sections S12, S13)"),
+      (8.7, f"Uncertainty:\nSobol {_sob:,},\nLHS 4,096\n(Section S3)")]
 for x, s in an:
     box(ax, x, 1.35, s, fs=5.5, fc="#EAF4EA")
     arrow(ax, 5.0, 3.09, x, 2.35)
@@ -150,7 +151,7 @@ ax = ax_d
 ax.set_xlim(0, 10); ax.set_ylim(0, 13.2); ax.axis("off")
 label(ax, "d", x=0.0, y=1.0)
 ev = [
-    (12.0, "1  Verification gates (seven automated tests)\nscalar oracle to 1e-6 on 2,000 conditions; Madrid 1.0405 / 1.0136\nwith 7 infeasible; Texas 601 escalated; WUE bit-invariant to the\nauxiliary term; wet bulb vs chart; approach rule on 30,000 states", "#F3F3F3"),
+    (12.0, "1  Verification gates (eight automated tests)\nscalar oracle to 1e-6 on 2,000 conditions; Madrid 1.0405 / 1.0136\nwith 7 infeasible; Texas 601 escalated; WUE bit-invariant to the\nauxiliary term; wet bulb vs chart; approach rule and production\nphysics (outlet bound, condenser load) on 30,000 states", "#F3F3F3"),
     (9.95, "2  Configuration calibration (Madrid series, legacy rules)\npartial-pressure entropy reproduces occupancy 12.6/67.2/19.8/0.4\nexactly with 0 escalations; means -0.34% (PUE), +0.67% (WUE)", "#F3F3F3"),
     (8.2, f"3  Closure comparison (all stations, both sprayed modes)\nMerkel finite-transfer method, Me = 0.75 to 3.0, calibrated on nothing:\nworld PUE within {_me_dp:+.3f}, WUE within {_me_dw:+.3f} L kWh$^{{-1}}$ at Me = 1.5", "#F3F3F3"),
     (6.75, f"4  Convolution consistency\ndensity means against record-level means: {_cb_p:.2f}% PUE, {_cb_w:.2f}% WUE", "#F3F3F3"),
@@ -160,7 +161,7 @@ ev = [
 ]
 for y, s, fc in ev:
     box(ax, 5.0, y, s, fs=5.5, fc=fc, ls="--" if fc == "white" else "-")
-hh = {1: 0.28, 2: 0.46, 3: 0.64, 4: 0.82}
+hh = {1: 0.28, 2: 0.46, 3: 0.64, 4: 0.82, 5: 1.00}
 for (y0, s0, _), (y1, s1, _) in zip(ev[:-1], ev[1:]):
     arrow(ax, 5.0, y0 - hh[s0.count("\n") + 1], 5.0, y1 + hh[s1.count("\n") + 1])
 ax.text(9.85, 12.9, "increasing distance from the code $\\downarrow$", ha="right", va="center", fontsize=5.4, color=GREY, style="italic")

@@ -15,7 +15,10 @@ LOG.mkdir(exist_ok=True, parents=True)
 
 GROUPS = {
     "classify": [["assign_koppen"], ["world_koppen_analysis"], ["dc_classification"]],
-    "analyses": [["world_analysis", "closure_check", "gsa_world", "design_optimization",
+    # world_analysis runs alone first: aqueduct_overlay and precip_phase read the annual
+    # benchmark it writes, so they cannot start in the same concurrent group
+    "analyses": [["world_analysis"],
+                 ["closure_check", "gsa_world", "design_optimization",
                   "warming_scenarios", "aqueduct_overlay", "precip_phase",
                   "classification_hardening", "representativeness", "vcap_rederive",
                   "water_scenarios", "load_profiles", "approach_stats"],

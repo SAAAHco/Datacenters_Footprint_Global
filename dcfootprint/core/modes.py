@@ -67,7 +67,7 @@ def select_mode_economizer(T2, HR2, p, T4base=26.0, a_wet=A_WET, a_dry=A_DRY,
 
 
 def run_policy(T2, HR2, T4base=26.0, p=1e5, props=V2_PARTIALP, max_rungs=10,
-               a_wet=A_WET, a_dry=A_DRY):
+               a_wet=A_WET, a_dry=A_DRY, legacy=None):
     """Run the production policy and the residual ladder. Same return keys as
     run_with_escalation plus 'twb' (inlet wet bulb) and 'reset' (degrees of condenser
     water reset above the design set point, chiller records only; the ladder rungs are
@@ -78,7 +78,8 @@ def run_policy(T2, HR2, T4base=26.0, p=1e5, props=V2_PARTIALP, max_rungs=10,
         T2, HR2, p, T4base=T4base, a_wet=a_wet, a_dry=a_dry, props=props)
     T1 = T1.copy(); T4 = T4.copy(); evap = evap.copy(); chill = chill.copy(); mode = mode.copy()
     T5, WUE, PUEnoIT, Tdew2, ex = model_vec(T1, T2, HR2, T2, T4, np.full_like(T2, 100.0),
-                                            evap, chill, p=p, props=props, extras=True)
+                                            evap, chill, p=p, props=props, extras=True,
+                                            legacy=legacy)
     esc = np.zeros(T2.shape, int)
     wet_ok = twb <= T_SUPPLY - a_wet
     T4c = np.maximum(float(T4base), np.ceil(twb + a_wet))
@@ -102,7 +103,7 @@ def run_policy(T2, HR2, T4base=26.0, p=1e5, props=V2_PARTIALP, max_rungs=10,
         esc[idx] = rung
         t5, w, pn, td, e2 = model_vec(T1[idx], T2[idx], HR2[idx], T2[idx], T4[idx],
                                       np.full(len(idx), 100.0), evap[idx], chill[idx],
-                                      p=p[idx], props=props, extras=True)
+                                      p=p[idx], props=props, extras=True, legacy=legacy)
         T5[idx] = t5; WUE[idx] = w; PUEnoIT[idx] = pn
         for k in ("fan", "pump", "VAmix5"):
             ex[k][idx] = e2[k]

@@ -52,7 +52,7 @@ for ax in axes:
     for s in ("top", "right"):
         ax.spines[s].set_visible(False)
 handles = [Patch(fc=c, label=lab) for _, lab, c in GROUPS]
-axes[1].legend(handles=handles, loc="lower right", frameon=False, title="Köppen main group")
+axes[1].legend(handles=handles, loc="lower right", frameon=False, title="Köppen-Geiger main group")
 fig.tight_layout()
 fig.savefig(RW / "fig_koppen_footprint_grouped.png")
 fig.savefig(ROOT / "results_world" / "Journal" / "EPS" / "fig_koppen_footprint_grouped.eps")

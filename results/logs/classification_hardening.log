@@ -1,62 +1,65 @@
-2055 stations, k = 4, Koppen benchmark eta2 {'PUE': 0.8301393818851668, 'WUE': 0.860469193761337}
-(i) bootstrap: ARI median 0.478 (p5 0.398, p95 0.686); k = 4 in 47% of resamples; median station stability 0.70 (44s)
+2055 stations, k = 4, Koppen benchmark eta2 {'PUE': 0.8297433029576706, 'WUE': 0.8632958334937453}
+(i) bootstrap: ARI median 0.559 (p5 0.361, p95 0.797); k = 4 in 36% of resamples; median station stability 0.76 (29s)
 (ii) split half (50 draws), held out half assigned from climate normals only:
-    tree:             PUE 0.830 +- 0.030   WUE 0.847 +- 0.036
-    nearest centroid: PUE 0.827 +- 0.021   WUE 0.803 +- 0.017
-    Koppen 26:        PUE 0.832 +- 0.008   WUE 0.863 +- 0.006
-(iii) blocked CV (105 blocks of 15 deg): tree accuracy 88.4%; eta2 of blocked labels PUE 0.886 WUE 0.863; class mean prediction error median 0.0106 kWh/kWh, 0.084 L/kWh
-(iv) tree: depth 4, min leaf 25, 14 leaves; resubstitution 89.8%, blocked 88.4%
+    tree:             PUE 0.826 +- 0.033   WUE 0.841 +- 0.039
+    nearest centroid: PUE 0.825 +- 0.022   WUE 0.811 +- 0.013
+    Koppen 26:        PUE 0.832 +- 0.008   WUE 0.865 +- 0.006
+(iii) blocked CV (105 blocks of 15 deg): tree accuracy 89.1%; eta2 of blocked labels PUE 0.820 WUE 0.883; class mean prediction error median 0.0130 kWh/kWh, 0.094 L/kWh
+(iv) tree: depth 4, min leaf 25, 15 leaves; resubstitution 92.7%, blocked 89.1%
 rule      1    2    3    4
 actual                    
-1       530  109    0    0
-2        32  706   17    0
-3         0   33  235    7
-4         0    0   12  374
+1       155   42    0    0
+2         9  812   35    0
+3         0   30  559   25
+4         0    0   10  378
  dc_class   n  precision  recall  PUE_mae_rule  WUE_mae_rule  PUE_mae_true  WUE_mae_true
-        1 639     0.9431  0.8294        0.0095        0.1238        0.0068        0.1059
-        2 755     0.8325  0.9351        0.0135        0.1312        0.0136        0.1364
-        3 275     0.8902  0.8545        0.0144        0.0938        0.0146        0.0792
-        4 386     0.9816  0.9689        0.0142        0.0325        0.0142        0.0279
+        1 197     0.9451  0.7868        0.0052        0.1043        0.0019        0.0655
+        2 856     0.9186  0.9486        0.0110        0.1117        0.0110        0.1133
+        3 614     0.9255  0.9104        0.0212        0.1375        0.0199        0.1489
+        4 388     0.9380  0.9742        0.0148        0.0522        0.0141        0.0459
 
-|--- Td_mean <= 11.5
-|   |--- T_mean <= 11.5
-|   |   |--- T_mean <= 5.5
-|   |   |   |--- T_mean <= 3.0
+|--- T_mean <= 14.0
+|   |--- T_mean <= 1.5
+|   |   |--- T_range <= 34.5
+|   |   |   |--- Td_mean <= -4.0
 |   |   |   |   |--- class: 1
-|   |   |   |--- T_mean >  3.0
+|   |   |   |--- Td_mean >  -4.0
 |   |   |   |   |--- class: 1
-|   |   |--- T_mean >  5.5
-|   |   |   |--- T_range <= 22.5
+|   |   |--- T_range >  34.5
+|   |   |   |--- T_mean <= -3.5
 |   |   |   |   |--- class: 1
-|   |   |   |--- T_range >  22.5
+|   |   |   |--- T_mean >  -3.5
 |   |   |   |   |--- class: 2
-|   |--- T_mean >  11.5
-|   |   |--- T_mean <= 19.0
-|   |   |   |--- T_range <= 17.5
+|   |--- T_mean >  1.5
+|   |   |--- T_range <= 21.0
+|   |   |   |--- T_mean <= 6.5
+|   |   |   |   |--- class: 1
+|   |   |   |--- T_mean >  6.5
 |   |   |   |   |--- class: 2
-|   |   |   |--- T_range >  17.5
+|   |   |--- T_range >  21.0
+|   |   |   |--- T_mean <= 13.5
 |   |   |   |   |--- class: 2
-|   |   |--- T_mean >  19.0
-|   |   |   |--- Td_mean <= 5.5
+|   |   |   |--- T_mean >  13.5
 |   |   |   |   |--- class: 2
-|   |   |   |--- Td_mean >  5.5
-|   |   |   |   |--- class: 3
-|--- Td_mean >  11.5
-|   |--- T_range <= 9.5
+|--- T_mean >  14.0
+|   |--- T_range <= 10.0
 |   |   |--- T_mean <= 19.5
-|   |   |   |--- class: 3
+|   |   |   |--- T_mean <= 17.0
+|   |   |   |   |--- class: 3
+|   |   |   |--- T_mean >  17.0
+|   |   |   |   |--- class: 3
 |   |   |--- T_mean >  19.5
-|   |   |   |--- T_mean <= 21.0
+|   |   |   |--- Td_mean <= 14.5
 |   |   |   |   |--- class: 4
-|   |   |   |--- T_mean >  21.0
+|   |   |   |--- Td_mean >  14.5
 |   |   |   |   |--- class: 4
-|   |--- T_range >  9.5
+|   |--- T_range >  10.0
 |   |   |--- T_mean <= 25.0
-|   |   |   |--- T_mean <= 17.5
-|   |   |   |   |--- class: 2
-|   |   |   |--- T_mean >  17.5
+|   |   |   |--- T_mean <= 15.5
+|   |   |   |   |--- class: 3
+|   |   |   |--- T_mean >  15.5
 |   |   |   |   |--- class: 3
 |   |   |--- T_mean >  25.0
 |   |   |   |--- class: 4
 
-[done] 46s
+[done] 30s

@@ -140,11 +140,11 @@ cmap = plt.get_cmap("tab10")
 for c in sorted(res["dc_class"].dropna().unique()):
     vals = [int(ct.loc[c, cat]) if c in ct.index else 0 for cat in CATS]
     ax2.bar(range(len(CATS)), vals, bottom=bottom, color=cmap((int(c) - 1) % 10),
-            label=f"DC class {int(c)}")
+            label=f"Cooling class {int(c)}")
     bottom += np.array(vals, float)
 ax2.set_xticks(range(len(CATS)))
 ax2.set_xticklabels([c.split(" (")[0] for c in CATS], rotation=30, ha="right", fontsize=7)
-ax2.set_ylabel("Stations"); ax2.set_title("Who sits where: DC class by stress category")
+ax2.set_ylabel("Stations"); ax2.set_title("Cooling class by stress category")
 ax2.legend(fontsize=7)
 
 ax3 = fig.add_axes([0.56, 0.06, 0.40, 0.28])
@@ -159,5 +159,5 @@ ax3.set_ylabel("WUE (L/kWh)"); ax3b.set_ylabel("Water (ML/yr)")
 ax3.set_title("Water intensity rises with basin stress")
 h1, l1 = ax3.get_legend_handles_labels(); h2, l2 = ax3b.get_legend_handles_labels()
 ax3.legend(h1 + h2, l1 + l2, fontsize=7, loc="upper left")
-fig.savefig(OUT / "fig_water_stress.png", dpi=150)
+fig.savefig(OUT / "fig_water_stress.png", dpi=150, bbox_inches="tight")
 print(f"\n[done] {time.time()-t0:.0f}s")

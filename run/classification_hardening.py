@@ -160,6 +160,7 @@ for bkey in blocks:
     means = pd.DataFrame(dict(c=ref[tr], p=pue[tr], w=wue[tr])).groupby("c").mean()
     pue_hat[te] = means["p"].reindex(lab).to_numpy()
     wue_hat[te] = means["w"].reindex(lab).to_numpy()
+pd.DataFrame(dict(STATION=dc["STATION"], dc_class=ref, blocked_class=pred_blocked)).to_csv(OUT / "station_blocked_labels.csv", index=False)
 acc_blocked = float((pred_blocked == ref).mean())
 mae_p = float(np.nanmedian(np.abs(pue_hat - pue))); mae_w = float(np.nanmedian(np.abs(wue_hat - wue)))
 mean_p = float(np.nanmean(np.abs(pue_hat - pue))); mean_w = float(np.nanmean(np.abs(wue_hat - wue)))
@@ -203,7 +204,7 @@ for c in range(1, K + 1):
                    WUE_mae_true=float(np.abs(means_all.loc[c, "w"] - wue[sel]).mean())))
 cwd = pd.DataFrame(cw); cwd.to_csv(OUT / "hardening_tree_classwise.csv", index=False)
 (OUT / "hardening_tree_rules.txt").write_text(
-    f"DC class threshold rules (normals in degC; classes 1..{K}; resubstitution accuracy {100*acc_r:.1f}%, "
+    f"Cooling class threshold rules (normals in degC; classes 1..{K}; resubstitution accuracy {100*acc_r:.1f}%, "
     f"spatially blocked accuracy {100*acc_blocked:.1f}% vs the full 6 feature clustering)\n\n" + rules,
     encoding="utf-8")
 print(f"(iv) tree: depth {depth}, min leaf {leaf}, {nl} leaves; resubstitution {100*acc_r:.1f}%, "

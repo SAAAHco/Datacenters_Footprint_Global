@@ -29,6 +29,7 @@ sys.path.insert(0, str(ROOT))
 from dcfootprint.core.properties import V2_PARTIALP, twb_c         # noqa: E402
 from dcfootprint.core.modes import (run_policy, design_t4base_twb,  # noqa: E402
                                     A_WET, A_DRY, VCAP)
+from dcfootprint.core.tower import PHYSICS                          # noqa: E402
 from dcfootprint.data import ghcnh                                 # noqa: E402
 
 SRC = Path(os.environ.get("DCF_SRC", ROOT / "allData_World_cellSize_1.csv"))
@@ -44,6 +45,7 @@ if os.environ.get("DCF_SMOKE"):      # end to end smoke test on a truncated extr
     ghcnh.MIN_MONTH_COVERAGE = 0.0
 
 t0 = time.time()
+print(f"[physics] {PHYSICS}", flush=True)
 
 # ---------------------------------------------------------------- stage 1: stream + clean
 read_opts = pacsv.ReadOptions(block_size=1 << 27)
@@ -193,9 +195,10 @@ pd.DataFrame(monthly_out).to_csv(OUT / "station_monthly.csv", index=False)
 manifest = dict(
     generated="run world_pipeline.py",
     input=dict(path=str(SRC), size_bytes=os.path.getsize(SRC), rows=n_total),
-    model=dict(package_version="0.2.0", properties="v2-table6-partialp",
+    model=dict(package_version="0.3.0", properties="v2-table6-partialp",
                aux_term="corrected dp*Vdot (250 Pa fan, 0.21 MPa pump)",
                closure="reversible entropy null, bisection 60 iters",
+               physics=PHYSICS,
                policy=dict(name="water preferring economizer sequence with approach temperatures",
                            a_wet_K=A_WET, a_dry_K=A_DRY,
                            dry="T2 <= 18 - a_dry on the 27/18 loop",

@@ -1,0 +1,2 @@
+cap,draws,n_median,ari_median,ari_p5,ari_p95,agree_median,ari_random_median,agree_random_median,k_equal_share,k_modal,k_less_share,k_more_share
+50,50,1074,0.5260980004899105,0.423172721515073,0.7521384833150783,0.7593109869646182,0.5866004956947086,0.7639664804469274,0.76,4,0.16,0.08

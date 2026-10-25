@@ -1,11 +1,11 @@
-pass done (12s)
+pass done (14s)
 
 load weighted footprint (means over stations):
-  world: flat PUE 1.0661 WUE 0.7079 | inference 1.0676 / 0.7341 | night 1.0646 / 0.6815
-  class 1: flat PUE 1.0221 WUE 0.2911 | inference 1.0231 / 0.3178 | night 1.0212 / 0.2645
-  class 2: flat PUE 1.0507 WUE 0.6605 | inference 1.0526 / 0.6938 | night 1.0489 / 0.6268
-  class 3: flat PUE 1.0954 WUE 1.0025 | inference 1.0976 / 1.0348 | night 1.0931 / 0.9698
-  class 4: flat PUE 1.1442 WUE 1.2578 | inference 1.1456 / 1.2665 | night 1.1428 / 1.2489
+  world: flat PUE 1.0673 WUE 0.7870 | inference 1.0688 / 0.8161 | night 1.0658 / 0.7577
+  class 1: flat PUE 1.0162 WUE 0.1373 | inference 1.0164 / 0.1543 | night 1.0159 / 0.1203
+  class 2: flat PUE 1.0360 WUE 0.4806 | inference 1.0374 / 0.5142 | night 1.0345 / 0.4468
+  class 3: flat PUE 1.0761 WUE 0.9894 | inference 1.0782 / 1.0286 | night 1.0741 / 0.9497
+  class 4: flat PUE 1.1446 WUE 1.4446 | inference 1.1460 / 1.4554 | night 1.1432 / 1.4335
 
-night vs inference WUE: median -9.26%  p5 -24.05%  p95 -0.68%
-[done] 12s
+night vs inference WUE: median -9.47%  p5 -24.30%  p95 -0.60%
+[done] 14s

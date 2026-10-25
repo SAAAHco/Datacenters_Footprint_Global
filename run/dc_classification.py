@@ -224,6 +224,46 @@ print(summ.round(3).to_string())
 print(f"\nDC classes overall LOO median |dPUE| {loo['dPUE_pct'].abs().median():.2f}%  "
       f"|dWUE| {loo['dWUE_abs'].median():.3f} L/kWh")
 
+
+# ------------------------------------------- leave one out with membership from normals alone
+# The reference membership above is derived from the station's own footprint. Here each station
+# is placed in the class that the spatially blocked tree (classification_hardening.py, fitted on
+# climate normals without the station's 15 degree block) assigns to it, and predicted from the
+# pooled climate of the stations whose reference class that is (itself excluded).
+blk_path = OUT / "station_blocked_labels.csv"
+if blk_path.exists():
+    bl = pd.read_csv(blk_path).set_index("STATION")["blocked_class"]
+    sums = {}
+    for dclass, grp in res.groupby("dc_class"):
+        stns = [s for s in grp["STATION"] if s in hist]
+        sums[int(dclass)] = sum(hist[s].ravel().astype(np.float64) for s in stns) if len(stns) >= 5 else None
+    rows2 = []
+    for stn in res_idx.index:
+        if stn not in hist or stn not in bl.index:
+            continue
+        cb = int(bl.loc[stn])
+        if sums.get(cb) is None:
+            continue
+        pool = sums[cb].copy()
+        if int(res_idx.loc[stn, "dc_class"]) == cb:
+            pool -= hist[stn].ravel()
+        gP, gW = gmaps[(float(res_idx.loc[stn, "T4base"]), int(round(p_med[stn] / P_STEP)))]
+        f = gaussian_filter(pool.reshape(NT, NR), sigma=(sig_T, sig_R), mode="constant")
+        f = f / f.sum()
+        okm = ~np.isnan(gP)
+        w = f * okm; w = w / w.sum()
+        rows2.append(dict(STATION=stn, dc_class=int(res_idx.loc[stn, "dc_class"]), blocked_class=cb,
+                          PUE_actual=float(res_idx.loc[stn, "PUE"]), PUE_loo=float(np.nansum(w * gP)),
+                          WUE_actual=float(res_idx.loc[stn, "WUE"]), WUE_loo=float(np.nansum(w * gW))))
+    loo2 = pd.DataFrame(rows2)
+    loo2["dPUE_pct"] = 100 * (loo2["PUE_loo"] - loo2["PUE_actual"]) / loo2["PUE_actual"]
+    loo2["dWUE_abs"] = (loo2["WUE_loo"] - loo2["WUE_actual"]).abs()
+    loo2["dWUE_pct"] = 100 * (loo2["WUE_loo"] - loo2["WUE_actual"]) / loo2["WUE_actual"]
+    loo2.to_csv(OUT / "dc_loo_blocked.csv", index=False)
+    agree = 100 * (loo2["blocked_class"] == loo2["dc_class"]).mean()
+    print(f"LOO with blocked-tree membership: median |dPUE| {(loo2['PUE_loo'] - loo2['PUE_actual']).abs().median():.4f}  "
+          f"|dWUE| {loo2['dWUE_abs'].median():.3f} L/kWh  (n = {len(loo2)}, membership agrees with reference in {agree:.1f}%)")
+
 res[["STATION", "lat", "lon", "koppen", "dc_class"] + FEATS + ["T_mean", "Td_mean"]].to_csv(
     OUT / "dc_classes.csv", index=False)
 

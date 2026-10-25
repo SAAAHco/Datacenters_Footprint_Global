@@ -1,19 +1,20 @@
-[stage1] 99,167,636 raw rows, 3379 stations cleaned, 74s
-[stage2] 250 stations, 128s
-[stage2] 500 stations, 312s
-[stage2] 750 stations, 667s
-[stage2] 1000 stations, 764s
-[stage2] 1250 stations, 1177s
-[stage2] 1500 stations, 1494s
-[stage2] 1750 stations, 1749s
-[stage2] 2000 stations, 2008s
-[stage2] 2250 stations, 2330s
-[stage2] 2500 stations, 2579s
-[stage2] 2750 stations, 2892s
-[stage2] 3000 stations, 3368s
-[stage2] 3250 stations, 3630s
+[physics] v3: tower load Q_DC (1 + chill/COP) in the chiller mode; T5 bisected between min(T2, T4) and T1
+[stage1] 99,167,636 raw rows, 3379 stations cleaned, 77s
+[stage2] 250 stations, 131s
+[stage2] 500 stations, 316s
+[stage2] 750 stations, 679s
+[stage2] 1000 stations, 778s
+[stage2] 1250 stations, 1313s
+[stage2] 1500 stations, 1739s
+[stage2] 1750 stations, 2084s
+[stage2] 2000 stations, 2476s
+[stage2] 2250 stations, 2970s
+[stage2] 2500 stations, 3366s
+[stage2] 2750 stations, 3750s
+[stage2] 3000 stations, 4200s
+[stage2] 3250 stations, 4464s
 
-[done] stations 3379, screened in 2081, out 1298, 3658s
-[done] world mean PUE 1.0781  WUE 0.7991  (station level, unweighted)
+[done] stations 3379, screened in 2081, out 1298, 4512s
+[done] world mean PUE 1.0792  WUE 0.8948  (station level, unweighted)
 [done] occupancy means: free 35.0%  evap 19.4%  chill 45.4%  esc 0.2%
-[done] reset records total 113,588  max reset 17 K  ladder climbs 4  infeasible left 0
+[done] reset records total 113,588  max reset 17 K  ladder climbs 0  infeasible left 0

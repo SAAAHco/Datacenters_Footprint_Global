@@ -22,7 +22,7 @@
 import numpy as np
 
 from .properties import V2_PARTIALP, RA, RV, K0, EPS_W, pvsat_pa
-from .tower import DP_FAN, DP_PUMP, cop
+from .tower import DP_FAN, DP_PUMP, cop, LEGACY_PHYSICS
 
 N_SIMPSON = 32      # intervals of the Merkel integral over the water temperature range
 N_BISECT = 50       # bisection steps on the operating line slope
@@ -37,8 +37,10 @@ def _hsat(T, p, props):
     return props.hA(T) + _wsat(T, p) * props.hV(T)
 
 
-def merkel_sprayed(T1, T2, HR2, T4, p, Me, props=V2_PARTIALP):
-    """Merkel solution for sprayed records. Arrays broadcast over records.
+def merkel_sprayed(T1, T2, HR2, T4, p, Me, props=V2_PARTIALP, chill=0.0, legacy=None):
+    """Merkel solution for sprayed records. Arrays broadcast over records. chill marks
+    chiller-mode records, whose tower load is Q_DC (1 + 1/COP) under the production physics
+    (legacy: Q_DC in every mode, as in tower.model_vec).
 
     Returns dict with WUE (L per kWh), fan (kW per kW), pump (kW per kW), VAmix5 (m3/s per
     kW), T5 (C), G (kg dry air per s per kW), Me_min, feasible (bool). Infeasible records
@@ -47,12 +49,15 @@ def merkel_sprayed(T1, T2, HR2, T4, p, Me, props=V2_PARTIALP):
     T1 = np.asarray(T1, float); T2 = np.asarray(T2, float); HR2 = np.asarray(HR2, float)
     T4 = np.asarray(T4, float); p = np.asarray(p, float); Me = np.asarray(Me, float)
     T1, T2, HR2, T4, p, Me = np.broadcast_arrays(T1, T2, HR2, T4, p, Me)
+    legacy = LEGACY_PHYSICS if legacy is None else bool(legacy)
+    chill = np.broadcast_to(np.asarray(chill, float), T1.shape)
+    q = np.ones_like(T1) if legacy else 1.0 + chill / cop(T4)   # tower load per kW of computing
     pV2 = HR2 / 100.0 * pvsat_pa(T2)
     w2 = EPS_W * pV2 / (p - pV2)
     h2 = props.hA(T2) + w2 * props.hV(T2)
     cpw = props.hL(T4 + 1.0) - props.hL(T4)           # kJ/kg/K of the liquid fit
     hL1 = props.hL(T1); hL4 = props.hL(T4)
-    mL = 1.0 / (hL1 - hL4)                             # kg/s per kW
+    mL = q / (hL1 - hL4)                               # kg/s per kW of computing
     # Simpson nodes over the water temperature range
     s = np.linspace(0.0, 1.0, N_SIMPSON + 1)           # (n+1,)
     Tw = T4[..., None] + s * (T1 - T4)[..., None]      # (..., n+1)
@@ -81,7 +86,7 @@ def merkel_sprayed(T1, T2, HR2, T4, p, Me, props=V2_PARTIALP):
         lo = np.where(too_small, mid, lo)
         hi = np.where(too_small, hi, mid)
     x = 0.5 * (lo + hi)
-    G = 1.0 / x                                        # kg dry air per s per kW
+    G = q / x                                          # kg dry air per s per kW of computing
     h5 = h2 + x
     # saturated outlet at enthalpy h5
     tlo = np.minimum(T2, T4) - 5.0; thi = T1 + 0.0

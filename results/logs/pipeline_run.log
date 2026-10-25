@@ -1,0 +1,20 @@
+[physics] v3: tower load Q_DC (1 + chill/COP) in the chiller mode; T5 bisected between min(T2, T4) and T1
+[stage1] 99,167,636 raw rows, 3379 stations cleaned, 80s
+[stage2] 250 stations, 135s
+[stage2] 500 stations, 316s
+[stage2] 750 stations, 688s
+[stage2] 1000 stations, 791s
+[stage2] 1250 stations, 1346s
+[stage2] 1500 stations, 1772s
+[stage2] 1750 stations, 2112s
+[stage2] 2000 stations, 2501s
+[stage2] 2250 stations, 2992s
+[stage2] 2500 stations, 3388s
+[stage2] 2750 stations, 3775s
+[stage2] 3000 stations, 4235s
+[stage2] 3250 stations, 4522s
+
+[done] stations 3379, screened in 2081, out 1298, 4580s
+[done] world mean PUE 1.0673  WUE 0.7870  (station level, unweighted)
+[done] occupancy means: free 43.0%  evap 19.1%  chill 37.8%  esc 0.1%
+[done] reset records total 84,641  max reset 16 K  ladder climbs 0  infeasible left 0

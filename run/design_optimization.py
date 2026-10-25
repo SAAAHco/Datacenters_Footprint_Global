@@ -17,6 +17,7 @@
 #    chiller (at its own reset set point) only as residual. Same tower physics and rules.
 # Outputs: design_policies.csv, design_policy_summary.csv, design_frontier_stations.csv,
 # design_frontier.csv, design_lambda_star.csv, design_t4_sweep.csv, dlc_archetype.csv.
+import os
 import sys
 import time
 from pathlib import Path
@@ -27,7 +28,10 @@ import pyarrow.parquet as pq
 
 ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT))
-OUT = ROOT / "results_world"
+IN = ROOT / "results_world"
+# DCF_OUT redirects the outputs (sensitivity runs, e.g. with DCF_DRY_PUMP_MPA set); inputs stay in results_world
+OUT = Path(os.environ["DCF_OUT"]) if os.environ.get("DCF_OUT") else IN
+OUT.mkdir(parents=True, exist_ok=True)
 
 from dcfootprint.core.properties import V2_PARTIALP, twb_c                 # noqa: E402
 from dcfootprint.core.tower import model_vec                               # noqa: E402
@@ -46,14 +50,14 @@ H100 = np.full(NCELL, 100.0)
 LAMBDAS = [0.0, 0.001, 0.002, 0.005, 0.01, 0.02, 0.05, 0.1, 0.2, 0.5, 1.0, 1e9]
 MAX_RUNGS = 12
 
-res = pd.read_csv(OUT / "station_results.csv")
+res = pd.read_csv(IN / "station_results.csv")
 res = res[res["screen_pass"] == True].set_index("STATION")     # noqa: E712
-dc = pd.read_csv(OUT / "dc_classes.csv").set_index("STATION")
+dc = pd.read_csv(IN / "dc_classes.csv").set_index("STATION")
 K = int(dc["dc_class"].max())
 
 # ---------------------------------------------------- histograms and pressure per station
 hist = {}; p_med = {}
-pf = pq.ParquetFile(OUT / "world_hourly.parquet")
+pf = pq.ParquetFile(IN / "world_hourly.parquet")
 for i in range(pf.num_row_groups):
     d = pf.read_row_group(i, columns=["STATION", "T", "RH", "p_pa"]).to_pandas()
     for stn, g in d.groupby("STATION", sort=False):

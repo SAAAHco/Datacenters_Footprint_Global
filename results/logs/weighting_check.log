@@ -1,0 +1,2 @@
+ cap  draws  n_median  ari_median  ari_p5  ari_p95  agree_median  k_equal_share  k_modal  k_less_share  k_more_share
+  50     50      1074       0.566   0.419    0.748         0.777           0.78        4          0.14          0.08

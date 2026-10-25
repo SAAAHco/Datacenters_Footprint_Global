@@ -1,15 +1,36 @@
 {
   "title": "Datacenters_Footprint_Global: global water and energy footprint of evaporative data center cooling (model package, verification gates, analysis scripts and results of record)",
-  "version": "2.0.0",
+  "version": "3.0.0",
   "upload_type": "software",
   "license": "cc-by-4.0",
-  "description": "Thermodynamic model of an evaporative data center cooling tower (mass, energy and entropy balances, reversible closure, economizer operating policy with approach temperatures, Merkel finite-transfer comparison), its verification gates, one script per analysis, and every analysis table and figure of the article 'The world's climates sort evaporative data center cooling into four water and energy regimes'. The cleaned hourly record (world_hourly.parquet, 65,217,135 station hours at 2,081 GHCNh stations in 139 countries, 2022 to 2025) and the 5 K / 8 K approach sensitivity run are deposited alongside the repository snapshot. Results are licensed CC BY 4.0, code MIT. Version 2.0.0 is the run of record of the article; see CHANGELOG.md.",
+  "description": "Thermodynamic model of an evaporative data center cooling tower (mass, energy and entropy balances, reversible closure bounded by the warm water, condenser load in the chiller mode, economizer operating policy with approach temperatures, Merkel finite-transfer comparison), its verification gates, one script per analysis, and every analysis table and figure of the article 'Water and energy footprint of evaporative data center cooling across the world's climates: a global hourly thermodynamic assessment and a cooling classification'. The cleaned hourly record (world_hourly_v3.parquet, 65,217,135 station hours at 2,081 GHCNh stations in 139 countries, 2022 to 2025) and the 5 K / 8 K approach sensitivity run are deposited alongside the repository snapshot. Results are licensed CC BY 4.0, code MIT. Version 3.0.0 is the run of record of the article and supersedes 2.0.0 (condenser load and outlet bracket corrected); see CHANGELOG.md.",
   "creators": [
-    {"name": "Ashkanani, Zainab", "affiliation": "Texas A&M University"},
-    {"name": "Sánchez, Raúl", "affiliation": "Universidad Politécnica de Madrid; Texas A&M University"},
-    {"name": "Mohtar, Rabi", "affiliation": "Texas A&M University"},
-    {"name": "Albatayneh, Rashed", "affiliation": "Texas A&M University"}
+    {
+      "name": "Ashkanani, Zainab",
+      "affiliation": "Texas A&M University"
+    },
+    {
+      "name": "Sánchez, Raúl",
+      "affiliation": "Universidad Politécnica de Madrid; Texas A&M University"
+    },
+    {
+      "name": "Mohtar, Rabi",
+      "affiliation": "Texas A&M University"
+    },
+    {
+      "name": "Albatayneh, Rashed",
+      "affiliation": "Texas A&M University"
+    }
   ],
-  "keywords": ["data center cooling", "power usage effectiveness", "water usage effectiveness", "evaporative cooling", "climate classification", "water-energy nexus", "cooling tower", "GHCNh"],
+  "keywords": [
+    "data center cooling",
+    "power usage effectiveness",
+    "water usage effectiveness",
+    "evaporative cooling",
+    "climate classification",
+    "water-energy nexus",
+    "cooling tower",
+    "GHCNh"
+  ],
   "access_right": "open"
 }

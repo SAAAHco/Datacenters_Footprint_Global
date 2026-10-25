@@ -29,6 +29,7 @@ OUT = ROOT / "results_world"
 
 from dcfootprint.core.properties import RA, RV, K0, EPS_W, pvsat_pa, twb_c   # noqa: E402
 from dcfootprint.core.modes import select_mode_economizer, A_WET, A_DRY      # noqa: E402
+from dcfootprint.core.tower import LEGACY_PHYSICS                            # noqa: E402
 
 t0 = time.time()
 
@@ -87,9 +88,15 @@ def model_param(par, T1, T2, HR2, T4, evap, chill, p, n_iter=40):
         Tdew2 = np.where(HR2 == 100, T2, 237.3 / (17.27 / np.log(pV2 / 610.78) - 1))
     hL3 = hL(T3); sL3 = sL0(T3)
     hL4 = hL(T4); sL4 = sL0(T4)
-    mL1 = 1.0 / (hL1 - hL4); mL4 = mL1
-
-    T5max = np.full_like(T2, 50.0); T5min = T2.copy()
+    copv = cop0 + cop1 * 18 - cop2 * T4
+    if LEGACY_PHYSICS:
+        Qt = np.ones_like(T2)
+        T5max = np.full_like(T2, 50.0); T5min = T2.copy()
+    else:   # production physics, as in tower.model_vec: condenser load, bounded outlet
+        Qt = 1.0 + np.asarray(chill, float) / copv
+        T5max = np.broadcast_to(np.asarray(T1, float), T2.shape).copy()
+        T5min = np.minimum(T2, np.broadcast_to(np.asarray(T4, float), T2.shape))
+    mL1 = Qt / (hL1 - hL4); mL4 = mL1
 
     def ev(T5):
         hV5 = hV(T5); hA5 = hA(T5)
@@ -107,7 +114,7 @@ def model_param(par, T1, T2, HR2, T4, evap, chill, p, n_iter=40):
         WUE = mL3 * 3600
         fan = VAmix5 * dpA / 1000.0
         pump = (mL1 / 1000.0) * dpL / 1000.0
-        PUEnoIT = fan + pump + chill / (cop0 + cop1 * 18 - cop2 * T4)
+        PUEnoIT = fan + pump + chill / copv
         varE = (sL4 * mL4 + (sA5 * mA + sV5 * mV5) - sL1 * mL1
                 - (sA2 * mA + sV2 * mV2) - sL3 * mL3)
         return WUE, PUEnoIT, varE, fan

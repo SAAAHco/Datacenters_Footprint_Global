@@ -1,8 +1,8 @@
 cff-version: 1.2.0
 message: "If you use this code or these results, please cite the article and the archived release."
 title: "Datacenters_Footprint_Global: global water and energy footprint of evaporative data center cooling"
-version: 2.0.0
-date-released: 2026-10-24
+version: 3.0.0
+date-released: 2026-10-25
 license: MIT
 repository-code: "https://github.com/SAAAHco/Datacenters_Footprint_Global"
 authors:
@@ -20,7 +20,7 @@ authors:
     affiliation: "Texas A&M University"
 preferred-citation:
   type: article
-  title: "The world's climates sort evaporative data center cooling into four water and energy regimes"
+  title: "Water and energy footprint of evaporative data center cooling across the world's climates: a global hourly thermodynamic assessment and a cooling classification"
   authors:
     - family-names: Ashkanani
       given-names: Zainab

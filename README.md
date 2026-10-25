@@ -1,19 +1,18 @@
 # Global water and energy footprint of evaporative data center cooling
 
-Code and results for the article "The world's climates sort evaporative data center cooling
-into four water and energy regimes" (Z. Ashkanani, R. Sánchez, R. Mohtar, R. Albatayneh;
+Code and results for the article "Water and energy footprint of evaporative data center cooling across the world's climates: a global hourly thermodynamic assessment and a cooling classification" (Z. Ashkanani, R. Sánchez, R. Mohtar, R. Albatayneh;
 submitted to Energy Conversion and Management: X). This repository holds the thermodynamic
 model package, the verification gates, one script per analysis, every analysis table and
 figure of the study, and the documented execution order, sufficient to reproduce every number
-and figure from the raw weather archive. Version 2.0.0 is the run of record of that article;
-see `CHANGELOG.md` for what changed from the first run.
+and figure from the raw weather archive. Version 3.0.0 is the run of record of that article;
+see `CHANGELOG.md` for what changed from the earlier runs.
 
 ## What is here
 
 | Path | Content |
 | --- | --- |
-| `dcfootprint/` | The model package. `core/properties.py` (REFPROP fits, partial-pressure entropy, wet bulb), `core/tower.py` (mass, energy and entropy balances, bisection closure, auxiliary power, chiller COP), `core/modes.py` (the production operating policy: economizer sequence with approach temperatures, condenser water reset, residual ladder, wet-bulb design rule; the legacy rules kept for the gates), `core/closure_merkel.py` (the Merkel finite-transfer closure used as the independent check), `core/closure_entu.py` (the v1 effectiveness check, unused), `data/ghcnh.py` (cleaning policy, pressure trust ladder, coverage screen). |
-| `tests/` | Seven verification gates (pytest). Gates 1, 3, 4 and 5 need the regional baseline inputs (`Old_analysis/`, available from the authors) and skip without them; gates 6 to 8 run self-contained. |
+| `dcfootprint/` | The model package. `core/properties.py` (REFPROP fits, partial-pressure entropy, wet bulb), `core/tower.py` (mass, energy and entropy balances, bisection closure, auxiliary power, chiller COP; production physics v3: the tower rejects Q_DC(1 + 1/COP) in the chiller mode and the outlet air is bracketed between min(T2, T4) and T1, with the v2 conventions behind `DCF_LEGACY_PHYSICS`), `core/modes.py` (the production operating policy: economizer sequence with approach temperatures, condenser water reset, residual ladder, wet-bulb design rule; the legacy rules kept for the gates), `core/closure_merkel.py` (the Merkel finite-transfer closure used as the independent check), `core/closure_entu.py` (the v1 effectiveness check, unused), `data/ghcnh.py` (cleaning policy, pressure trust ladder, coverage screen). |
+| `tests/` | Eight verification gates (pytest). Gates 1, 3, 4 and 5 need the regional baseline inputs (`Old_analysis/`, available from the authors) and skip without them; gates 6 to 9 run self-contained. `conftest.py` sets `DCF_LEGACY_PHYSICS=1` so that the frozen regional gates run under the v2 conventions; gate 9 tests the production physics explicitly. |
 | `run/` | One script per analysis, and `run_chain.py`, which runs the downstream stages in groups (`RUN_ORDER.md`). |
 | `wsData.py`, `dataExtract.py` | Stage 0: station screening, equal-area grid selection and record extraction from the raw GHCNh archive. |
 | `WS_list.xlsx`, `World_cellSize_1.csv` | The 24,072-station inventory and the 3,379-station world selection it produces. |
@@ -22,7 +21,7 @@ see `CHANGELOG.md` for what changed from the first run.
 
 ## The cleaned hourly record
 
-`world_hourly.parquet` (1.06 GB; 65,217,135 cleaned station hours with temperature, humidity,
+`world_hourly.parquet` (1.02 GB, deposited as `world_hourly_v3.parquet`; 65,217,135 cleaned station hours with temperature, humidity,
 pressure, wet bulb, PUE, WUE, operating mode, condenser water reset and ladder rung per hour)
 exceeds the GitHub file limit and is deposited with the Zenodo archive of this repository
 (DOI in the article's data availability statement). `run/world_pipeline.py` regenerates it
@@ -70,6 +69,10 @@ See `RUN_ORDER.md`. In short: stage 0 extraction (`wsData.py`, `dataExtract.py`)
   Twb <= 18 - 3 K; else chiller at T4 = max(T4_design, ceil(Twb + 3 K)), T1 = T4 + 24 K;
   design rule T4_design = max(26, floor(p99.5(Twb) + 3) + 1) C; residual ladder with the
   0.15 m3 s-1 kW-1 practical air-flow bound.
+- Physics (v3): the tower rejects Q_DC in the dry and evaporative modes and Q_DC(1 + 1/COP) in
+  the chiller mode (the condenser load); the outlet air temperature is bisected between
+  min(T2, T4) and T1. `DCF_LEGACY_PHYSICS=1` restores the v2 conventions (load Q_DC in every
+  mode, bracket T2 to 50 C), which the frozen gates were produced under.
 - Barometric pressure: U.S. Standard Atmosphere 1976,
   p = 101325 exp(-9.81 z / (287 (273.16 + Tmean_C))) Pa.
 

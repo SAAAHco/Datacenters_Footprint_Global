@@ -9,7 +9,7 @@ import pandas as pd
 import pytest
 
 from dcfootprint.core.properties import V1, V2_PARTIALP, twb_c, pvsat_pa, tdew_c
-from dcfootprint.core.tower import model_vec
+from dcfootprint.core.tower import model_vec, cop
 from dcfootprint.core.modes import (select_mode, run_with_escalation, run_policy,
                                     design_t4base_twb, A_WET, A_DRY, T_SUPPLY)
 
@@ -137,6 +137,40 @@ def test_gate8_policy_holds_the_approach_everywhere():
     tw = np.array([10.0, 20.0, 22.4, 24.9])
     assert design_t4base_twb(tw, a_wet=3.0, pct=100.0)[0] == 28.0
     assert design_t4base_twb(np.array([5.0, 12.0]), a_wet=3.0, pct=100.0)[0] == 26.0
+
+
+# ---------------------------------------- gate 9: production physics (v3 conventions)
+def test_gate9_production_physics():
+    """The production run rejects the computing load plus the compressor work through the
+    tower in the chiller mode, and bounds the outlet air by the warm water."""
+    rng = np.random.default_rng(5)
+    n = 30000
+    T = rng.uniform(-30, 48, n); RH = rng.uniform(1, 100, n); p = rng.uniform(60000, 105000, n)
+    for t4b in (26.0, 30.0):
+        r = run_policy(T, RH, T4base=t4b, p=p, props=V2_PARTIALP, max_rungs=10, legacy=False)
+        ok = np.isfinite(r["PUE"]) & np.isfinite(r["WUE"])
+        assert ok.mean() > 0.999, f"{int((~ok).sum())} records infeasible after the ladder"
+        assert np.all(r["T5"][ok] <= r["T1"][ok] + 1e-9), "outlet air hotter than the warm water"
+        assert np.all(r["T5"][ok] >= np.minimum(T, r["T4"])[ok] - 1e-9)
+        assert all((r["mode"] == k).sum() > 0 for k in range(3))
+    # chiller mode: the tower load is Q_DC (1 + 1/COP); the outlet state does not depend on it
+    args = (np.array([50.0]), np.array([25.0]), np.array([30.0]), np.array([25.0]),
+            np.array([26.0]), np.array([100.0]), np.array([1.0]), np.array([1.0]))
+    T5l, Wl, Pl, _, exl = model_vec(*args, p=1e5, props=V1, extras=True, legacy=True)
+    T5n, Wn, Pn, _, exn = model_vec(*args, p=1e5, props=V1, extras=True, legacy=False)
+    f = 1.0 + 1.0 / cop(26.0)
+    auxl = exl["fan"][0] + exl["pump"][0]; auxn = exn["fan"][0] + exn["pump"][0]
+    assert abs(T5n[0] - T5l[0]) < 1e-9, "outlet state changed with the load"
+    assert abs(Wn[0] / Wl[0] - f) < 1e-9, f"WUE ratio {Wn[0] / Wl[0]:.6f} != {f:.6f}"
+    assert abs(auxn / auxl - f) < 1e-9
+    assert abs(Pn[0] - Pl[0] - (f - 1.0) * auxl) < 1e-9
+    # tower-only loop: where the zero of entropy production lies above the warm water, the
+    # production bracket places the outlet at the warm water (dry and evaporative modes)
+    for evap in (0.0, 1.0):
+        T5d, _, _, _ = model_vec(np.array([27.0]), np.array([5.0]), np.array([50.0]), np.array([5.0]),
+                                 np.array([18.0]), np.array([100.0]), np.array([evap]), np.array([0.0]),
+                                 p=1e5, props=V2_PARTIALP, legacy=False)
+        assert abs(T5d[0] - 27.0) < 1e-6, f"T5 = {T5d[0]:.3f} (evap {evap})"
 
 
 # ------------------------------------------------------------- gate 3: Madrid baseline

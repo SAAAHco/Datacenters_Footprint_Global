@@ -71,7 +71,7 @@ def merkel_map(t4b, p, Me, rev):
     PUE = rev["PUE"].copy(); WUE = rev["WUE"].copy()
     state = rev["state"].copy()
     spr = evap == 1
-    m = merkel_sprayed(T1[spr], GT[spr], GR[spr], T4[spr], p, Me)
+    m = merkel_sprayed(T1[spr], GT[spr], GR[spr], T4[spr], p, Me, chill=chill[spr])
     ok = m["feasible"] & (m["VAmix5"] <= VCAP)
     PUE[spr] = np.where(ok, pue_from(m["fan"], m["pump"], chill[spr], T4[spr]), np.nan)
     WUE[spr] = np.where(ok, m["WUE"], np.nan)
@@ -85,7 +85,7 @@ def merkel_map(t4b, p, Me, rev):
         T4[idx] = np.where(was_evap, T4c[idx], T4[idx] + 1.0)
         T1[idx] = T4[idx] + LOOP_SPLIT
         chill[idx] = 1.0; mode[idx] = 2
-        m = merkel_sprayed(T1[idx], GT[idx], GR[idx], T4[idx], p, Me)
+        m = merkel_sprayed(T1[idx], GT[idx], GR[idx], T4[idx], p, Me, chill=1.0)
         ok = m["feasible"] & (m["VAmix5"] <= VCAP)
         PUE[idx] = np.where(ok, pue_from(m["fan"], m["pump"], 1.0, T4[idx]), np.nan)
         WUE[idx] = np.where(ok, m["WUE"], np.nan)
